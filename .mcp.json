@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "aws-diagram": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@awslabs/mcp-server-aws-diagram"]
+    }
+  }
+}
