@@ -178,38 +178,4 @@ http://localhost:3000
 
 ---
 
-### 서비스 포트 요약
 
-| 서비스 | 포트 | 설명 |
-|--------|------|------|
-| Frontend | 3000 | React 개발 서버 |
-| Backend API | 8000 | FastAPI REST API |
-| Model Server | 8001 | AI 추론 서버 (Mock) |
-
----
-
-### 포트 충돌 해결
-
-```powershell
-# 모든 Python 프로세스 종료 후 재시작
-taskkill /F /IM python.exe
-```
-
----
-
-## 다른 컴퓨터로 옮길 때 체크리스트
-
-| 항목 | 상태 | 조치 |
-|------|------|------|
-| `.env` DB 절대경로 | ⚠️ 주의 | `DATABASE_URL` 줄 삭제 또는 주석 처리 → 자동 경로 사용 |
-| `node_modules/` | ✅ 불필요 | `npm install` 로 재생성 |
-| Python 패키지 | ✅ 불필요 | `pip install -r requirements.txt` 로 재설치 |
-| `skin_ai.db` (SQLite) | ⚠️ 선택 | 기존 데이터 이전 시 파일도 함께 복사 |
-| `.env` 파일 | ⚠️ 필수 | `.gitignore` 대상이므로 직접 복사 필요 |
-
-> **핵심:** `.env`에서 `DATABASE_URL` 줄을 주석 처리하면 어느 컴퓨터에서든 자동으로 올바른 경로를 찾습니다.
-
-```env
-# 이 줄을 주석 처리하면 자동으로 경로 계산
-# DATABASE_URL=sqlite+aiosqlite:///C:/절대경로/...
-```
