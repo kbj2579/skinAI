@@ -81,21 +81,44 @@ export const login = (email: string, password: string) =>
 export const getMe = () => client.get('/auth/me')
 
 // ── Analysis ───────────────────────────────────────────────────
-export type AnalysisType = 'skin' | 'scalp' | 'lesion'
+export type AnalysisType = 'skin' | 'lesion'
 
-export const analyze = (type: AnalysisType, file: Blob, trackId?: number) => {
+interface AnalyzeOptions {
+  trackId?: number
+  bodyPart?: string
+  smoking?: boolean
+  drinking?: boolean
+}
+
+export const analyze = (type: AnalysisType, file: Blob, options: AnalyzeOptions = {}) => {
   const form = new FormData()
   form.append('file', file, 'image.jpg')
-  const params = trackId != null ? { track_id: trackId } : {}
+  const params: Record<string, string | number | boolean> = {}
+  if (options.trackId  != null) params.track_id  = options.trackId
+  if (options.bodyPart != null) params.body_part  = options.bodyPart
+  if (options.smoking  != null) params.smoking    = options.smoking
+  if (options.drinking != null) params.drinking   = options.drinking
   return client.post(`/analysis/${type}`, form, {
     params,
-    timeout: 90_000, // AI 분석은 최대 90초
+    timeout: 90_000,
   })
 }
 
 // ── Records ────────────────────────────────────────────────────
-export const listRecords = (analysisType?: AnalysisType, limit = 10, offset = 0) =>
-  client.get('/records/', { params: { analysis_type: analysisType, limit, offset } })
+export const listRecords = (
+  analysisType?: AnalysisType,
+  limit = 10,
+  offset = 0,
+  bodyPart?: string,
+) =>
+  client.get('/records/', {
+    params: {
+      analysis_type: analysisType,
+      body_part: bodyPart,
+      limit,
+      offset,
+    },
+  })
 
 export const getRecord = (id: number) => client.get(`/records/${id}`)
 
@@ -109,3 +132,24 @@ export const getLesionTrackHistory = (trackId: number) =>
 
 // ── Health ─────────────────────────────────────────────────────
 export const checkHealth = () => client.get('/health', { timeout: 5_000 })
+
+// ── Chat ───────────────────────────────────────────────────────
+export interface ChatMessage {
+  role: 'user' | 'assistant'
+  content: string
+}
+
+export interface ChatResponseData {
+  reply: string
+}
+
+export const sendChatMessage = (
+  message: string,
+  history: ChatMessage[],
+  analysisId?: number,
+) =>
+  client.post<ChatResponseData>('/chat', {
+    message,
+    history,
+    analysis_id: analysisId,
+  })

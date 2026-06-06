@@ -21,7 +21,7 @@ def upgrade() -> None:
         sa.Column("email", sa.String(), nullable=False, unique=True),
         sa.Column("password_hash", sa.String(), nullable=False),
         sa.Column("nickname", sa.String(), nullable=True),
-        sa.Column("created_at", sa.TIMESTAMP(timezone=True), server_default=sa.text("(datetime('now'))")),
+        sa.Column("created_at", sa.TIMESTAMP(timezone=True), server_default=sa.text("NOW()")),
     )
 
     op.create_table(
@@ -35,9 +35,9 @@ def upgrade() -> None:
         sa.Column("conditions", sa.JSON(), nullable=True),
         sa.Column("confidence", sa.Float(), nullable=True),
         sa.Column("gemini_explanation", sa.Text(), nullable=True),
-        sa.Column("recommend_visit", sa.Boolean(), server_default=sa.text("0")),
-        sa.Column("is_diagnostic", sa.Boolean(), server_default=sa.text("0")),
-        sa.Column("created_at", sa.TIMESTAMP(timezone=True), server_default=sa.text("(datetime('now'))")),
+        sa.Column("recommend_visit", sa.Boolean(), server_default=sa.text("FALSE")),
+        sa.Column("is_diagnostic", sa.Boolean(), server_default=sa.text("FALSE")),
+        sa.Column("created_at", sa.TIMESTAMP(timezone=True), server_default=sa.text("NOW()")),
     )
     op.create_index("idx_analyses_user_date", "analyses", ["user_id", "created_at"])
 
@@ -58,7 +58,7 @@ def upgrade() -> None:
         sa.Column("border_score", sa.Float(), nullable=True),
         sa.Column("color_variance", sa.Float(), nullable=True),
         sa.Column("size_mm", sa.Float(), nullable=True),
-        sa.Column("created_at", sa.TIMESTAMP(timezone=True), server_default=sa.text("(datetime('now'))")),
+        sa.Column("created_at", sa.TIMESTAMP(timezone=True), server_default=sa.text("NOW()")),
     )
     op.create_index("idx_lesion_analyses_track", "lesion_analyses", ["track_id", "created_at"])
 

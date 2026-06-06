@@ -33,6 +33,9 @@ class SkinMetrics(BaseModel):
 class AnalysisResponse(BaseModel):
     id: int
     analysis_type: str
+    body_part: str | None = None
+    smoking: bool | None = None
+    drinking: bool | None = None
     risk_level: str
     conditions: list[ConditionItem]
     confidence: float

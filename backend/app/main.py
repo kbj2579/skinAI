@@ -9,7 +9,7 @@ from sqlalchemy import text
 
 from app.core.config import settings
 from app.core.database import init_database, get_db
-from app.routers import analysis, auth, records
+from app.routers import analysis, auth, records, chat
 
 logger = logging.getLogger(__name__)
 
@@ -23,7 +23,7 @@ async def lifespan(_: FastAPI):
 # ── FastAPI 인스턴스 ───────────────────────────────────────────
 app = FastAPI(
     title="Skin AI API",
-    description="AI 기반 피부·두피·병변 분석 서비스",
+    description="AI 기반 피부·병변 분석 서비스",
     version="1.0.0",
     lifespan=lifespan,
     docs_url="/docs",
@@ -70,6 +70,7 @@ async def global_exception_handler(request: Request, exc: Exception):
 app.include_router(auth.router)
 app.include_router(analysis.router)
 app.include_router(records.router)
+app.include_router(chat.router)
 
 # ── 기본 엔드포인트 ───────────────────────────────────────────
 @app.get("/", include_in_schema=False)

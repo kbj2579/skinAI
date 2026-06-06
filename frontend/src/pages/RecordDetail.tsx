@@ -6,9 +6,9 @@ import VisitBanner from '../components/VisitBanner'
 import { SkeletonDetailCard } from '../components/Skeleton'
 import { useToast } from '../context/ToastContext'
 import { colors, font, radius, shadow } from '../theme'
+import { TYPE_LABELS, METRIC_LABELS, scoreColor, metricColor, SkinMetrics } from '../utils/skinHelpers'
 
 interface ConditionItem { label: string; score: number }
-interface SkinMetrics { oiliness: number; moisture: number; trouble: number; sensitivity: number }
 
 interface RecordDetail {
   id: number
@@ -22,30 +22,11 @@ interface RecordDetail {
   is_diagnostic: boolean
   disclaimer: string
   created_at: string
+  body_part: string | null
+  smoking: boolean | null
+  drinking: boolean | null
 }
 
-const TYPE_LABELS: Record<string, string> = { skin: '안면피부', scalp: '두피', lesion: '병변' }
-
-const METRIC_LABELS: Record<keyof SkinMetrics, string> = {
-  oiliness: '유분도', moisture: '수분도', trouble: '트러블', sensitivity: '민감도',
-}
-
-const scoreColor = (score: number) => {
-  if (score >= 0.7) return colors.danger
-  if (score >= 0.4) return colors.warning
-  return colors.success
-}
-
-const metricColor = (key: string, value: number) => {
-  if (key === 'moisture') {
-    if (value >= 60) return colors.success
-    if (value >= 40) return colors.warning
-    return colors.danger
-  }
-  if (value <= 30) return colors.success
-  if (value <= 60) return colors.warning
-  return colors.danger
-}
 
 export default function RecordDetailPage() {
   const { id } = useParams<{ id: string }>()
@@ -96,6 +77,54 @@ export default function RecordDetailPage() {
       {record.recommend_visit && (
         <div style={{ marginBottom: 12 }}>
           <VisitBanner message="전문의 진료가 권장됩니다. 가까운 피부과를 방문하세요." />
+        </div>
+      )}
+
+      {/* 설문 정보 */}
+      {(record.body_part || record.smoking != null || record.drinking != null) && (
+        <div
+          style={{
+            backgroundColor: colors.card, borderRadius: radius.xl, padding: '14px 20px',
+            marginBottom: 12, boxShadow: shadow.card,
+          }}
+        >
+          <p style={{ fontSize: font.size.xs, fontWeight: font.weight.semibold, color: colors.text2, marginBottom: 12, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+            분석 정보
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+            {record.body_part && (
+              <span style={{
+                fontSize: font.size.sm, color: colors.accent,
+                backgroundColor: colors.accentLight,
+                borderRadius: radius.pill, padding: '4px 12px',
+                fontWeight: font.weight.semibold,
+              }}>
+                📍 {record.body_part}
+              </span>
+            )}
+            {record.smoking != null && (
+              <span style={{
+                fontSize: font.size.sm,
+                color: record.smoking ? colors.danger : colors.success,
+                backgroundColor: record.smoking ? `${colors.danger}18` : `${colors.success}18`,
+                borderRadius: radius.pill, padding: '4px 12px',
+                fontWeight: font.weight.semibold,
+              }}>
+                🚬 {record.smoking ? '흡연' : '비흡연'}
+              </span>
+            )}
+            {record.drinking != null && (
+              <span style={{
+                fontSize: font.size.sm,
+                color: record.drinking ? colors.warning : colors.success,
+                backgroundColor: record.drinking ? `${colors.warning}18` : `${colors.success}18`,
+                borderRadius: radius.pill, padding: '4px 12px',
+                fontWeight: font.weight.semibold,
+              }}>
+                🍺 {record.drinking ? '음주' : '비음주'}
+              </span>
+            )}
+          </div>
         </div>
       )}
 

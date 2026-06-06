@@ -10,7 +10,7 @@ export default function Profile() {
   const navigate = useNavigate()
   const { show } = useToast()
   const [user, setUser] = useState<UserInfo | null>(null)
-  const [stats, setStats] = useState({ total: 0, skin: 0, scalp: 0, lesion: 0 })
+  const [stats, setStats] = useState({ total: 0, skin: 0, lesion: 0 })
 
   useEffect(() => {
     getMe().then((res) => setUser(res.data)).catch(() => {})
@@ -19,11 +19,10 @@ export default function Profile() {
     Promise.all([
       listRecords(undefined, 1, 0),
       listRecords('skin', 1, 0),
-      listRecords('scalp', 1, 0),
       listRecords('lesion', 1, 0),
-    ]).then(([all, skin, scalp, lesion]) => {
+    ]).then(([all, skin, lesion]) => {
       const get = (r: any) => typeof r.data?.total === 'number' ? r.data.total : 0
-      setStats({ total: get(all), skin: get(skin), scalp: get(scalp), lesion: get(lesion) })
+      setStats({ total: get(all), skin: get(skin), lesion: get(lesion) })
     }).catch(() => {})
   }, [])
 
@@ -120,7 +119,6 @@ export default function Profile() {
           {[
             { label: '전체', value: stats.total, color: colors.accent },
             { label: '안면피부', value: stats.skin, color: '#FF9500' },
-            { label: '두피', value: stats.scalp, color: '#34C759' },
             { label: '병변', value: stats.lesion, color: '#FF3B30' },
           ].map((s) => (
             <div
@@ -158,26 +156,17 @@ export default function Profile() {
           boxShadow: shadow.card,
         }}
       >
-        {[
-          { label: '서비스 버전', value: 'v1.0.0' },
-          { label: '분석 엔진', value: 'Gemini 1.5 Flash' },
-          { label: '데이터베이스', value: 'Supabase PostgreSQL' },
-          { label: '이미지 저장소', value: 'Cloudflare R2' },
-        ].map((item, i, arr) => (
-          <div
-            key={item.label}
-            style={{
-              padding: '13px 16px',
-              borderBottom: i < arr.length - 1 ? `1px solid ${colors.divider}` : 'none',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            }}
-          >
-            <span style={{ fontSize: font.size.md, color: colors.text1 }}>{item.label}</span>
-            <span style={{ fontSize: font.size.sm, color: colors.text2 }}>{item.value}</span>
-          </div>
-        ))}
+        <div
+          style={{
+            padding: '13px 16px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
+          <span style={{ fontSize: font.size.md, color: colors.text1 }}>서비스 버전</span>
+          <span style={{ fontSize: font.size.sm, color: colors.text2 }}>v1.0.0</span>
+        </div>
       </div>
 
       {/* 면책 */}

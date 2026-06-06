@@ -1,4 +1,4 @@
-# AI 기반 두피·안면피부 분석 서비스
+# AI 기반 안면피부·병변 분석 서비스
 
 > 본 서비스는 AI 보조 분석 도구입니다. 의학적 진단을 대체하지 않으며, 모든 분석 결과는 참고용으로만 활용하십시오.
 
@@ -6,86 +6,128 @@
 
 ## 프로젝트 주제 및 목표
 
-스마트폰 카메라로 촬영한 두피·안면피부 이미지를 AI가 분석하여 상태를 분류하고, 쉬운 언어로 관리 방법을 안내하는 건강 보조 서비스입니다.
+스마트폰 카메라로 촬영한 안면피부·병변 이미지를 AI가 분석하여 상태를 분류하고, 쉬운 언어로 관리 방법을 안내하는 건강 보조 서비스입니다.
 
 ### 핵심 목표
 
 | 목표 | 설명 |
 |------|------|
-| **접근성** | 병원 방문 전 간편하게 두피·피부 상태를 1차 확인 |
+| **접근성** | 병원 방문 전 간편하게 피부 상태를 1차 확인 |
 | **안전성** | AI 분석은 보조 수단임을 명시, 고위험 결과 시 전문의 방문 자동 권장 |
 | **연속성** | 분석 이력을 축적하여 시간에 따른 상태 변화 모니터링 |
 
 ### 분석 유형
 
-- **안면피부 분석** — 피부염, 아토피, 건선, 주사, 지루성피부염, 정상 (6종)
-- **두피 분석** — 미세각질, 피지과다, 비듬, 탈모, 정상 (5종)
+- **안면피부 분석** — 여드름, 민감성, 건조, 홍조, 색소침착, 정상
+- **병변 분석** — 병변 경계·형태·색상 분석, 위험도 분류
 
 ---
 
 ## 시스템 아키텍처
 
 ```
-┌──────────────────────────────────────────────────────────────────────────────────┐
-│                            Frontend  (React + TypeScript + Vite)                  │
-│                                                                                    │
-│  • 이미지 선택 후 Canvas API로 1024×1024 리사이즈                                  │
-│  • 분석 유형 선택 (안면피부 / 두피)                                                  │
-│  • 분석 결과 표시: 위험도 배지, 감지 상태, AI 설명, 병원 방문 권장 배너              │
-│  • 분석 이력 목록 및 상세 조회                                                       │
-└────────────────────────────┬─────────────────────────────────────────────────────┘
-                             │  REST API  (JWT 인증)
-                             ▼
-┌──────────────────────────────────────────────────────────────────────────────────┐
-│                              Backend  (FastAPI · Python)                           │
-│                                                                                    │
-│   ① 이미지 수신                                                                     │
-│      └─ 업로드된 이미지를 멀티파트로 수신, 포맷·확장자 검증                          │
-│                                                                                    │
-│   ② 병렬 처리  (asyncio.gather)                                                    │
-│      ├─ [이미지 저장]  →  Cloudflare R2에 업로드, 저장 경로(key) 반환               │
-│      └─ [AI 추론]     →  Model Server에 이미지 전송, 분류 결과 수신                 │
-│                                                                                    │
-│   ③ 위험도 판정  (룰 기반 · 코드 고정)                                              │
-│      └─ suspicious / danger 판정 시 → 병원 방문 권장 플래그 자동 설정               │
-│                                                                                    │
-│   ④ AI 관리 안내 생성                                                               │
-│      └─ Gemini API에 분석 결과 + 과거 이력 전달                                     │
-│         → 현재 상태 설명, 즉시 실천 관리법, 병원 방문 안내 텍스트 생성              │
-│         → 응답 캐싱으로 동일 결과 중복 호출 방지 / API 실패 시 fallback 메시지 반환  │
-│                                                                                    │
-│   ⑤ DB 저장 및 응답 반환                                                            │
-│      └─ 분석 결과 전체를 Supabase에 저장, 면책 문구 포함하여 클라이언트에 응답       │
-│                                                                                    │
-└──────┬──────────────────────────┬──────────────────────┬───────────────────────  ┘
-       │                          │                      │
-       ▼                          ▼                      ▼
-┌─────────────────┐   ┌─────────────────────┐   ┌──────────────────────┐
-│   Model Server  │   │   Cloudflare R2      │   │   Supabase           │
-│   (FastAPI)     │   │   (이미지 저장소)     │   │   (PostgreSQL DB)    │
-│                 │   │                     │   │                      │
-│ • 안면피부 분류  │   │ • 업로드 이미지 보관  │   │ • users              │
-│   6종 클래스    │   │ • S3 호환 API        │   │ • analyses           │
-│ • 두피 분류     │   │ • DB엔 경로만 저장   │   │ • lesion_tracks      │
-│   5종 클래스    │   │                     │   │ • lesion_analyses    │
-│ • 신뢰도 점수   │   │                     │   │                      │
-│ • 바운딩 박스   │   │                     │   │                      │
-└─────────────────┘   └─────────────────────┘   └──────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│                  Frontend (React + TypeScript + Vite)             │
+│                                                                    │
+│  • 카메라/갤러리로 이미지 선택 → Canvas API로 1024×1024 리사이즈   │
+│  • 분석 유형 선택 (안면피부 / 병변)                                 │
+│  • 분석 결과: 위험도 배지, 감지 상태, AI 설명, 피부 지표 게이지     │
+│  • 분석 이력 목록 및 상세 조회                                      │
+└──────────────────────┬───────────────────────────────────────────┘
+                       │  REST API (JWT 인증)
+                       ▼
+┌──────────────────────────────────────────────────────────────────┐
+│                     Backend (FastAPI · Python)                     │
+│                                                                    │
+│  ① 이미지 수신 — 멀티파트 수신, 포맷·크기 검증 (최대 20MB)          │
+│                                                                    │
+│  ② 병렬 처리 (asyncio.gather)                                      │
+│     ├─ [이미지 저장]  →  AWS S3 업로드, 저장 경로(key) 반환         │
+│     └─ [AI 추론]     →  SageMaker → 로컬 서버 → Mock 순 fallback   │
+│                                                                    │
+│  ③ 위험도 판정 (룰 기반)                                            │
+│     └─ suspicious / danger → 전문의 방문 권장 플래그 자동 설정      │
+│                                                                    │
+│  ④ AI 설명 생성 (Gemini 2.0 Flash)                                 │
+│     └─ 분석 결과 + 과거 이력 전달 → 상태 설명, 관리법 텍스트 생성   │
+│        Redis 캐시 → 동일 결과 중복 호출 방지 / 실패 시 fallback     │
+│                                                                    │
+│  ⑤ DB 저장 및 응답 반환                                             │
+│     └─ 분석 결과 전체를 RDS에 저장, 면책 문구 포함하여 응답          │
+│                                                                    │
+└──────┬───────────────────┬──────────────────┬────────────────────┘
+       │                   │                  │
+       ▼                   ▼                  ▼
+┌─────────────┐   ┌──────────────────┐   ┌──────────────────────┐
+│  AI 모델    │   │   AWS S3          │   │   AWS RDS            │
+│  (SageMaker │   │   (이미지 저장소)  │   │   (PostgreSQL)       │
+│   or Mock)  │   │                  │   │                      │
+│             │   │ • user_image/    │   │ • users              │
+│ • 안면피부  │   │   skin/          │   │ • analyses           │
+│   분류      │   │   lesion/        │   │ • lesion_tracks      │
+│ • 병변 분류 │   │ • Presigned URL  │   │ • lesion_analyses    │
+│ • 신뢰도   │   │   방식 접근       │   │ • alembic_version    │
+└─────────────┘   └──────────────────┘   └──────────────────────┘
 ```
 
 ---
 
 ## 기술 스택
 
-| 영역 | 기술 | 역할 |
-|------|------|------|
-| **Frontend** | React 18, TypeScript, Vite, React Router v6, Axios, Recharts | 모바일 UI (390×844), 라우팅, HTTP 클라이언트, 차트 |
-| **Backend** | FastAPI, SQLAlchemy (async), Alembic, Pydantic, python-jose, bcrypt | REST API, ORM, 마이그레이션, 스키마 검증, JWT 인증 |
-| **Model Server** | FastAPI, Python | AI 추론 엔드포인트 (현재 Mock → 실 모델 교체 가능) |
-| **Database** | Supabase (PostgreSQL), asyncpg | 사용자·분석 결과·이력 데이터 저장 |
-| **이미지 저장소** | Cloudflare R2 (S3 호환), boto3 | 분석 이미지 원본 보관, 무료 egress |
-| **AI 설명** | Google Gemini API | 분석 결과 기반 관리 안내 텍스트 생성 |
-| **인프라** | Docker, Docker Compose | 서비스 컨테이너화 및 로컬 오케스트레이션 |
+| 영역 | 기술 |
+|------|------|
+| **Frontend** | React 18, TypeScript, Vite, React Router v6 |
+| **Backend** | FastAPI, SQLAlchemy (async), Alembic, Pydantic, python-jose, bcrypt |
+| **Database** | AWS RDS PostgreSQL, asyncpg |
+| **이미지 저장소** | AWS S3, boto3 |
+| **AI 추론** | AWS SageMaker (미연동 시 Mock fallback) |
+| **AI 설명** | Google Gemini 2.0 Flash (미설정 시 fallback 메시지) |
+| **캐시** | ElastiCache Redis (미연동 시 메모리 캐시 fallback) |
+
+---
+
+## 환경 변수 설정 (.env)
+
+프로젝트 루트에 `.env` 파일을 생성합니다.
+
+```env
+# ── AWS 자격증명 ───────────────────────────────────────
+AWS_REGION=ap-northeast-2
+AWS_ACCESS_KEY_ID=발급받은-액세스-키-ID
+AWS_SECRET_ACCESS_KEY=발급받은-시크릿-키
+
+# ── Database (AWS RDS PostgreSQL) ──────────────────────
+DATABASE_URL=postgresql+asyncpg://유저명:비밀번호@RDS엔드포인트:5432/postgres?ssl=require
+
+# ── 이미지 저장소 (AWS S3) ─────────────────────────────
+STORAGE_ENDPOINT=
+STORAGE_ACCESS_KEY=
+STORAGE_SECRET_KEY=
+STORAGE_BUCKET=버킷이름
+STORAGE_REGION=ap-northeast-2
+
+# ── AI 모델 (SageMaker) ────────────────────────────────
+# 비워두면 로컬 서버 → Mock 순으로 fallback
+SAGEMAKER_ENDPOINT_NAME=
+
+# ── 로컬 모델 서버 ─────────────────────────────────────
+AI_MODEL_BASE_URL=http://127.0.0.1:8001
+
+# ── 캐시 (ElastiCache Redis) ───────────────────────────
+# 비워두면 메모리 캐시 fallback
+REDIS_URL=
+
+# ── Gemini API ─────────────────────────────────────────
+# 비워두면 fallback 메시지 반환
+GEMINI_API_KEY=
+
+# ── JWT ────────────────────────────────────────────────
+JWT_SECRET=랜덤-시크릿-문자열
+JWT_EXPIRE_MINUTES=60
+
+# ── CORS ───────────────────────────────────────────────
+CORS_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
+```
 
 ---
 
@@ -93,49 +135,15 @@
 
 ### 사전 요구사항
 
-| 도구 | 버전 | 확인 명령어 |
-|------|------|-------------|
-| Python | 3.13 | `python --version` |
-| Node.js | 18 이상 | `node --version` |
-| npm | 8 이상 | `npm --version` |
+| 도구 | 버전 |
+|------|------|
+| Python | 3.13 |
+| Node.js | 18 이상 |
+| npm | 8 이상 |
 
 ---
 
-### 1단계 — 환경 변수 설정
-
-프로젝트 루트에 `.env` 파일을 생성합니다.
-
-```env
-# DB (로컬 SQLite)
-DATABASE_URL=sqlite+aiosqlite:///C:/절대경로/medical_ai_team3_new/backend/skin_ai.db
-
-# DB (Supabase 사용 시 위 줄 주석 처리 후 아래 사용)
-# DATABASE_URL=postgresql+asyncpg://postgres:[PASSWORD]@db.[PROJECT-REF].supabase.co:5432/postgres
-
-# 이미지 저장소 (Cloudflare R2 미설정 시 Mock 동작)
-STORAGE_ENDPOINT=https://[ACCOUNT-ID].r2.cloudflarestorage.com
-STORAGE_ACCESS_KEY=your-r2-access-key
-STORAGE_SECRET_KEY=your-r2-secret-key
-STORAGE_BUCKET=skin-ai
-STORAGE_REGION=auto
-
-# AI 모델 서버
-AI_MODEL_BASE_URL=http://127.0.0.1:8001
-
-# Gemini API (없으면 fallback 메시지 반환)
-GEMINI_API_KEY=your-gemini-api-key
-
-# JWT
-JWT_SECRET=your-random-secret-string
-JWT_EXPIRE_MINUTES=60
-
-# CORS
-CORS_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
-```
-
----
-
-### 2단계 — 백엔드 실행 (Terminal 1)
+### 1단계 — 백엔드 실행
 
 ```powershell
 cd backend
@@ -144,11 +152,11 @@ alembic upgrade head
 uvicorn app.main:app --reload --port 8000
 ```
 
-> `alembic upgrade head` — DB 테이블 최초 생성 시 한 번만 실행
+> `alembic upgrade head` — DB 테이블 최초 생성 시 한 번만 실행합니다.
 
 ---
 
-### 3단계 — 프론트엔드 실행 (Terminal 2)
+### 2단계 — 프론트엔드 실행
 
 ```powershell
 cd frontend
@@ -158,7 +166,7 @@ npm run dev
 
 ---
 
-### 4단계 — 모델 서버 실행 (Terminal 3, 선택)
+### 3단계 — 모델 서버 실행 (선택)
 
 ```powershell
 cd model
@@ -178,4 +186,21 @@ http://localhost:3000
 
 ---
 
+## AI 추론 우선순위
 
+서비스는 아래 순서로 AI 추론을 시도합니다. 상위 서비스가 실패하면 자동으로 다음으로 fallback됩니다.
+
+```
+1순위: AWS SageMaker 엔드포인트   (SAGEMAKER_ENDPOINT_NAME 설정 시)
+2순위: 로컬 모델 서버              (AI_MODEL_BASE_URL 서버 실행 시)
+3순위: Mock                       (항상 동작, 랜덤 결과 반환)
+```
+
+---
+
+## 주의사항
+
+- `.env` 파일은 `.gitignore`에 포함되어 있습니다. **절대 커밋하지 마십시오.**
+- AWS Access Key는 IAM에서 최소 권한 원칙으로 발급하십시오. (S3, RDS, SageMaker)
+- RDS 보안 그룹은 운영 환경에서 EC2 보안 그룹 ID만 허용하도록 변경하십시오.
+- 본 서비스의 AI 분석 결과는 의학적 진단이 아닙니다.

@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { listRecords, AnalysisType } from '../api/client'
 import RiskBadge from '../components/RiskBadge'
+import { TYPE_LABELS } from '../utils/skinHelpers'
 import { SkeletonRecordList } from '../components/Skeleton'
 import { useToast } from '../context/ToastContext'
 import { colors, font, radius, shadow } from '../theme'
@@ -9,30 +10,36 @@ import { colors, font, radius, shadow } from '../theme'
 interface RecordSummary {
   id: number
   analysis_type: string
+  body_part: string | null
   risk_level: string
   confidence: number | null
   recommend_visit: boolean
   created_at: string
 }
 
-const TYPE_LABELS: Record<string, string> = { skin: '안면피부', scalp: '두피', lesion: '병변' }
-const FILTER_OPTIONS: (AnalysisType | undefined)[] = [undefined, 'skin', 'scalp', 'lesion']
+const BODY_PARTS = ['얼굴', '팔', '다리', '등', '가슴', '배']
 const PAGE_SIZE = 10
 
 export default function Records() {
   const [records, setRecords] = useState<RecordSummary[]>([])
   const [total, setTotal] = useState(0)
-  const [filter, setFilter] = useState<AnalysisType | undefined>()
+  const [typeFilter, setTypeFilter] = useState<AnalysisType | undefined>()
+  const [partFilter, setPartFilter] = useState<string | undefined>()
   const [loading, setLoading] = useState(true)
   const [loadingMore, setLoadingMore] = useState(false)
   const [offset, setOffset] = useState(0)
   const navigate = useNavigate()
   const { show } = useToast()
 
-  const fetchRecords = useCallback(async (f: AnalysisType | undefined, reset: boolean) => {
+  const fetchRecords = useCallback(async (
+    tf: AnalysisType | undefined,
+    pf: string | undefined,
+    reset: boolean,
+    currentOffset: number,
+  ) => {
     if (reset) setLoading(true)
     try {
-      const res = await listRecords(f, PAGE_SIZE, reset ? 0 : offset)
+      const res = await listRecords(tf, PAGE_SIZE, reset ? 0 : currentOffset, pf)
       const data = res.data
       const items: RecordSummary[] = Array.isArray(data) ? data : (data.items ?? [])
       const tot: number = Array.isArray(data) ? data.length : (data.total ?? 0)
@@ -50,77 +57,79 @@ export default function Records() {
       setLoading(false)
       setLoadingMore(false)
     }
-  }, [offset, show])
+  }, [show])
 
   useEffect(() => {
     setOffset(0)
-    fetchRecords(filter, true)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filter])
+    fetchRecords(typeFilter, partFilter, true, 0)
+  }, [typeFilter, partFilter, fetchRecords])
 
-  const handleLoadMore = async () => {
+  const handleLoadMore = () => {
     setLoadingMore(true)
-    await fetchRecords(filter, false)
+    fetchRecords(typeFilter, partFilter, false, offset)
   }
 
   const hasMore = records.length < total
 
   return (
     <div style={{ padding: '20px 16px 100px', backgroundColor: colors.bg, minHeight: '100%' }}>
+
       {/* 헤더 */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 4 }}>
         <h1 style={{ fontSize: font.size.xxl, fontWeight: font.weight.bold, color: colors.text1, letterSpacing: '-0.02em' }}>
           분석 기록
         </h1>
         {!loading && total > 0 && (
-          <span
-            style={{
-              fontSize: font.size.sm,
-              color: colors.accent,
-              fontWeight: font.weight.semibold,
-              backgroundColor: colors.accentLight,
-              padding: '3px 10px',
-              borderRadius: radius.pill,
-            }}
-          >
+          <span style={{
+            fontSize: font.size.sm, color: colors.accent, fontWeight: font.weight.semibold,
+            backgroundColor: colors.accentLight, padding: '3px 10px', borderRadius: radius.pill,
+          }}>
             총 {total}건
           </span>
         )}
       </div>
-      <p style={{ fontSize: font.size.sm, color: colors.text2, marginBottom: 20 }}>
+      <p style={{ fontSize: font.size.sm, color: colors.text2, marginBottom: 16 }}>
         {loading ? ' ' : total === 0 ? '아직 분석 기록이 없습니다' : `${records.length}건 표시 중`}
       </p>
 
-      {/* 필터 */}
-      <div
-        style={{
-          display: 'flex',
-          backgroundColor: colors.bgSecondary,
-          borderRadius: radius.lg,
-          padding: 3,
-          marginBottom: 20,
-        }}
-      >
-        {FILTER_OPTIONS.map((t) => (
+      {/* 분석 유형 필터 */}
+      <div style={{
+        display: 'flex', backgroundColor: colors.bgSecondary,
+        borderRadius: radius.lg, padding: 3, marginBottom: 12,
+      }}>
+        {([undefined, 'skin', 'lesion'] as (AnalysisType | undefined)[]).map((t) => (
           <button
             key={t ?? 'all'}
-            onClick={() => { if (!loading) setFilter(t) }}
+            onClick={() => { if (!loading) setTypeFilter(t) }}
             style={{
-              flex: 1,
-              padding: '8px 4px',
-              borderRadius: radius.md,
-              border: 'none',
-              fontSize: font.size.sm,
-              fontWeight: font.weight.semibold,
-              cursor: 'pointer',
-              whiteSpace: 'nowrap',
-              transition: 'all 0.2s',
-              backgroundColor: filter === t ? colors.card : 'transparent',
-              color: filter === t ? colors.text1 : colors.text2,
-              boxShadow: filter === t ? shadow.card : 'none',
+              flex: 1, padding: '8px 4px', borderRadius: radius.md, border: 'none',
+              fontSize: font.size.sm, fontWeight: font.weight.semibold, cursor: 'pointer',
+              whiteSpace: 'nowrap', transition: 'all 0.2s',
+              backgroundColor: typeFilter === t ? colors.card : 'transparent',
+              color: typeFilter === t ? colors.text1 : colors.text2,
+              boxShadow: typeFilter === t ? shadow.card : 'none',
             }}
           >
             {t ? TYPE_LABELS[t] : '전체'}
+          </button>
+        ))}
+      </div>
+
+      {/* 부위 필터 */}
+      <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 20 }}>
+        {[undefined, ...BODY_PARTS].map((part) => (
+          <button
+            key={part ?? 'all'}
+            onClick={() => { if (!loading) setPartFilter(part) }}
+            style={{
+              padding: '5px 12px', borderRadius: radius.pill, cursor: 'pointer', transition: 'all 0.15s',
+              border: `1.5px solid ${partFilter === part ? colors.accent : colors.border}`,
+              backgroundColor: partFilter === part ? colors.accentLight : colors.bg,
+              color: partFilter === part ? colors.accent : colors.text2,
+              fontSize: font.size.xs, fontWeight: partFilter === part ? font.weight.semibold : font.weight.regular,
+            }}
+          >
+            {part ?? '전체'}
           </button>
         ))}
       </div>
@@ -132,19 +141,18 @@ export default function Records() {
         <div style={{ textAlign: 'center', padding: '60px 0' }}>
           <div style={{ fontSize: 48, marginBottom: 12 }}>📋</div>
           <p style={{ color: colors.text2, fontSize: font.size.md, marginBottom: 20 }}>
-            {filter ? `${TYPE_LABELS[filter]} 분석 기록이 없습니다` : '분석 기록이 없습니다'}
+            {partFilter
+              ? `${partFilter} 부위 기록이 없습니다`
+              : typeFilter
+              ? `${TYPE_LABELS[typeFilter]} 분석 기록이 없습니다`
+              : '분석 기록이 없습니다'}
           </p>
           <button
             onClick={() => navigate('/')}
             style={{
-              padding: '12px 28px',
-              backgroundColor: colors.accent,
-              color: '#fff',
-              border: 'none',
-              borderRadius: radius.xl,
-              fontSize: font.size.md,
-              fontWeight: font.weight.semibold,
-              cursor: 'pointer',
+              padding: '12px 28px', backgroundColor: colors.accent, color: '#fff',
+              border: 'none', borderRadius: radius.xl, fontSize: font.size.md,
+              fontWeight: font.weight.semibold, cursor: 'pointer',
             }}
           >
             첫 분석 시작하기
@@ -152,15 +160,10 @@ export default function Records() {
         </div>
       ) : (
         <>
-          <div
-            style={{
-              backgroundColor: colors.card,
-              borderRadius: radius.xl,
-              boxShadow: shadow.card,
-              overflow: 'hidden',
-              marginBottom: hasMore ? 12 : 0,
-            }}
-          >
+          <div style={{
+            backgroundColor: colors.card, borderRadius: radius.xl,
+            boxShadow: shadow.card, overflow: 'hidden', marginBottom: hasMore ? 12 : 0,
+          }}>
             {records.map((r, i) => (
               <div
                 key={r.id}
@@ -171,20 +174,34 @@ export default function Records() {
                 style={{
                   padding: '14px 16px',
                   borderBottom: i < records.length - 1 ? `1px solid ${colors.divider}` : 'none',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  transition: 'background-color 0.15s',
+                  cursor: 'pointer', display: 'flex', justifyContent: 'space-between',
+                  alignItems: 'center', transition: 'background-color 0.15s',
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = colors.bgSecondary)}
                 onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
               >
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <p style={{ fontSize: font.size.md, fontWeight: font.weight.medium, color: colors.text1, marginBottom: 3 }}>
-                    {TYPE_LABELS[r.analysis_type] ?? r.analysis_type} 분석
-                    {r.recommend_visit && <span style={{ marginLeft: 6, fontSize: font.size.xs, color: colors.warning }}>🏥 방문권장</span>}
-                  </p>
+                  {/* 제목 행 */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4, flexWrap: 'wrap' }}>
+                    <p style={{ fontSize: font.size.md, fontWeight: font.weight.semibold, color: colors.text1 }}>
+                      {TYPE_LABELS[r.analysis_type] ?? r.analysis_type}
+                    </p>
+                    {/* 부위 태그 */}
+                    {r.body_part && (
+                      <span style={{
+                        fontSize: font.size.xs, color: colors.accent,
+                        backgroundColor: colors.accentLight,
+                        borderRadius: radius.pill, padding: '1px 8px',
+                        fontWeight: font.weight.semibold,
+                      }}>
+                        {r.body_part}
+                      </span>
+                    )}
+                    {r.recommend_visit && (
+                      <span style={{ fontSize: font.size.xs, color: colors.warning }}>🏥 방문권장</span>
+                    )}
+                  </div>
+                  {/* 날짜 */}
                   <p style={{ fontSize: font.size.xs, color: colors.text2 }}>
                     {new Date(r.created_at).toLocaleString('ko-KR', {
                       year: 'numeric', month: 'short', day: 'numeric',
@@ -200,23 +217,17 @@ export default function Records() {
             ))}
           </div>
 
-          {/* Load More 버튼 */}
           {hasMore && (
             <button
               onClick={handleLoadMore}
               disabled={loadingMore}
               style={{
-                width: '100%',
-                padding: '13px',
-                backgroundColor: colors.card,
+                width: '100%', padding: '13px', backgroundColor: colors.card,
                 color: loadingMore ? colors.text3 : colors.accent,
-                border: `1.5px solid ${colors.divider}`,
-                borderRadius: radius.xl,
-                fontSize: font.size.sm,
-                fontWeight: font.weight.semibold,
+                border: `1.5px solid ${colors.divider}`, borderRadius: radius.xl,
+                fontSize: font.size.sm, fontWeight: font.weight.semibold,
                 cursor: loadingMore ? 'not-allowed' : 'pointer',
-                boxShadow: shadow.card,
-                transition: 'all 0.2s',
+                boxShadow: shadow.card, transition: 'all 0.2s',
               }}
             >
               {loadingMore ? '불러오는 중...' : `더 보기 (${total - records.length}건 남음)`}

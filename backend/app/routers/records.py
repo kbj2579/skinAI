@@ -71,6 +71,7 @@ async def get_track_history(
 @router.get("/", response_model=RecordListResponse)
 async def list_records(
     analysis_type: str | None = None,
+    body_part:     str | None = None,
     limit: int = 20,
     offset: int = 0,
     user_id: int = Depends(get_current_user_id),
@@ -79,6 +80,8 @@ async def list_records(
     base_query = select(Analysis).where(Analysis.user_id == user_id)
     if analysis_type:
         base_query = base_query.where(Analysis.analysis_type == analysis_type)
+    if body_part:
+        base_query = base_query.where(Analysis.body_part == body_part)
 
     # 전체 건수
     count_result = await db.execute(
@@ -116,6 +119,9 @@ async def get_record(
     return RecordDetail(
         id=record.id,
         analysis_type=record.analysis_type,
+        body_part=record.body_part,
+        smoking=record.smoking,
+        drinking=record.drinking,
         risk_level=record.risk_level,
         conditions=conditions,
         confidence=record.confidence,

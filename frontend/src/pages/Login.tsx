@@ -90,7 +90,7 @@ export default function Login() {
           피부 AI 분석
         </h1>
         <p style={{ fontSize: font.size.sm, color: colors.text2 }}>
-          두피·안면피부를 AI로 간편하게 분석하세요
+          안면피부·병변을 AI로 간편하게 분석하세요
         </p>
       </div>
 

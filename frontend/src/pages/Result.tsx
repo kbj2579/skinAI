@@ -3,15 +3,10 @@ import RiskBadge from '../components/RiskBadge'
 import VisitBanner from '../components/VisitBanner'
 import { colors, font, radius, shadow } from '../theme'
 import { useEffect } from 'react'
+import { useChatContext } from '../contexts/ChatContext'
+import { TYPE_LABELS, METRIC_LABELS, scoreColor, metricColor, SkinMetrics } from '../utils/skinHelpers'
 
 interface Condition { label: string; score: number }
-
-interface SkinMetrics {
-  oiliness: number
-  moisture: number
-  trouble: number
-  sensitivity: number
-}
 
 interface AnalysisResult {
   id: number
@@ -26,47 +21,20 @@ interface AnalysisResult {
   is_diagnostic: boolean
   disclaimer: string
   created_at: string
-  _fromType?: string  // Upload에서 전달된 분석 타입
-}
-
-const TYPE_KO: Record<string, string> = { skin: '안면피부', scalp: '두피', lesion: '병변' }
-
-const scoreColor = (score: number) => {
-  if (score >= 0.7) return colors.danger
-  if (score >= 0.4) return colors.warning
-  return colors.success
-}
-
-// 피부 지표 게이지 색상 (지표별 의미 반영)
-const metricColor = (key: string, value: number) => {
-  if (key === 'moisture') {
-    // 수분은 높을수록 좋음
-    if (value >= 60) return colors.success
-    if (value >= 40) return colors.warning
-    return colors.danger
-  }
-  // 유분·트러블·민감도는 낮을수록 좋음
-  if (value <= 30) return colors.success
-  if (value <= 60) return colors.warning
-  return colors.danger
-}
-
-const METRIC_LABELS: Record<keyof SkinMetrics, string> = {
-  oiliness: '유분도',
-  moisture: '수분도',
-  trouble: '트러블',
-  sensitivity: '민감도',
+  _fromType?: string
 }
 
 export default function Result() {
   const { state } = useLocation()
   const navigate = useNavigate()
   const result = state as AnalysisResult | null
+  const { setAnalysisId } = useChatContext()
 
-  // 결과 페이지 진입 시 스크롤 최상단
+  // 결과 페이지 진입 시 스크롤 최상단 + 챗봇 분석 컨텍스트 설정
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
+    if (result?.id) setAnalysisId(result.id)
+  }, [result?.id])
 
   // 새 분석: Upload로 이동 (state 없이 → location.key 변경으로 Upload 초기화)
   const handleNewAnalysis = () => {
@@ -107,7 +75,7 @@ export default function Result() {
           marginBottom: 4,
         }}
       >
-        {TYPE_KO[result.analysis_type] ?? result.analysis_type}
+        {TYPE_LABELS[result.analysis_type] ?? result.analysis_type}
       </h1>
       <p style={{ fontSize: font.size.sm, color: colors.text2, marginBottom: 20 }}>
         {new Date(result.created_at).toLocaleString('ko-KR')}
@@ -324,7 +292,7 @@ export default function Result() {
           }}
         >
           <span>🔄</span>
-          {TYPE_KO[result.analysis_type] ?? result.analysis_type} 재분석
+          {TYPE_LABELS[result.analysis_type] ?? result.analysis_type} 재분석
         </button>
 
         <div style={{ display: 'flex', gap: 10 }}>

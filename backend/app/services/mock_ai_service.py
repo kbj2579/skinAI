@@ -13,13 +13,6 @@ MOCK_CONFIG: dict[str, list[dict[str, object]]] = {
         {"label": "홍조", "risk": "suspicious", "weight": 1.0},
         {"label": "색소침착", "risk": "mild", "weight": 1.0},
     ],
-    "scalp": [
-        {"label": "정상", "risk": "normal", "weight": 4.5},
-        {"label": "미세각질", "risk": "mild", "weight": 2.0},
-        {"label": "지성두피", "risk": "mild", "weight": 2.0},
-        {"label": "비듬", "risk": "mild", "weight": 1.5},
-        {"label": "탈모", "risk": "suspicious", "weight": 1.0},
-    ],
     "lesion": [
         {"label": "정상", "risk": "normal", "weight": 4.5},
         {"label": "경계성 병변", "risk": "mild", "weight": 2.5},

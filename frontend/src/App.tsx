@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { ToastProvider } from './context/ToastContext'
+import { ChatProvider } from './contexts/ChatContext'
 import { ErrorBoundary } from './components/ErrorBoundary'
 import { NetworkBanner } from './components/NetworkBanner'
+import ChatBot from './components/ChatBot'
 import Login from './pages/Login'
 import Upload from './pages/Upload'
 import Result from './pages/Result'
@@ -124,6 +126,7 @@ function AppRoutes() {
 export default function App() {
   return (
     <ToastProvider>
+      <ChatProvider>
       <div
         style={{
           minHeight: '100vh',
@@ -151,15 +154,22 @@ export default function App() {
             <div style={{ width: 126, height: 22, backgroundColor: '#000', borderRadius: 20, border: '2px solid #1a1a1a' }} />
           </div>
 
-          {/* 콘텐츠 */}
+          {/* 콘텐츠 + 탭바 */}
           <ErrorBoundary>
-            <div style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', backgroundColor: colors.bg }}>
-              <BrowserRouter>
-                <NetworkBanner />
-                <AppRoutes />
+            <BrowserRouter>
+              {/* 플로팅 요소 기준점 */}
+              <div style={{ flex: 1, position: 'relative', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+                {/* 스크롤 영역 */}
+                <div style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', backgroundColor: colors.bg }}>
+                  <NetworkBanner />
+                  <AppRoutes />
+                </div>
+                {/* 탭바 — 스크롤 밖, 폰 하단 고정 */}
                 <BottomTabBar />
-              </BrowserRouter>
-            </div>
+                {/* 플로팅 챗봇 */}
+                <ChatBot />
+              </div>
+            </BrowserRouter>
           </ErrorBoundary>
 
           {/* 홈 인디케이터 */}
@@ -168,6 +178,7 @@ export default function App() {
           </div>
         </div>
       </div>
+    </ChatProvider>
     </ToastProvider>
   )
 }

@@ -7,6 +7,7 @@ from app.schemas.analysis import ConditionItem
 class RecordSummary(BaseModel):
     id: int
     analysis_type: str
+    body_part: str | None = None
     risk_level: str
     confidence: float | None
     recommend_visit: bool
@@ -18,6 +19,9 @@ class RecordSummary(BaseModel):
 class RecordDetail(BaseModel):
     id: int
     analysis_type: str
+    body_part: str | None = None
+    smoking: bool | None = None
+    drinking: bool | None = None
     risk_level: str
     conditions: list[ConditionItem] | None
     confidence: float | None

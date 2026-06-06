@@ -1,17 +1,12 @@
 import { colors, font, radius, shadow } from '../theme'
 
-type AnalysisType = 'skin' | 'scalp' | 'lesion'
+type AnalysisType = 'skin' | 'lesion'
 
 const GUIDES: Record<AnalysisType, string[]> = {
   skin: [
     '세안 후 30분 뒤 자연광 아래에서 촬영하세요.',
     '분석 부위가 화면 중앙에 오도록 하세요.',
     '선명하게 초점을 맞추고 15~20cm 거리를 유지하세요.',
-  ],
-  scalp: [
-    '두피 전용 카메라 또는 근접 촬영 모드를 사용하세요.',
-    '모발을 가르마로 나눠 두피가 잘 보이게 하세요.',
-    '밝은 조명 아래에서 촬영하세요.',
   ],
   lesion: [
     '점/병변이 화면 중앙에 오도록 하세요.',
@@ -20,7 +15,7 @@ const GUIDES: Record<AnalysisType, string[]> = {
   ],
 }
 
-const TYPE_KO: Record<AnalysisType, string> = { skin: '안면피부', scalp: '두피', lesion: '병변' }
+const TYPE_KO: Record<AnalysisType, string> = { skin: '안면피부', lesion: '병변' }
 
 export default function ImageGuide({ type, onClose }: { type: AnalysisType; onClose: () => void }) {
   return (

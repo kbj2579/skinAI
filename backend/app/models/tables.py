@@ -31,7 +31,7 @@ class Analysis(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
-    analysis_type = Column(String, nullable=False)   # skin | scalp | lesion
+    analysis_type = Column(String, nullable=False)   # skin | lesion
     image_s3_key = Column(String, nullable=True)
     raw_result = Column(JSON, nullable=True)          # model 원본 응답
     risk_level = Column(String, nullable=False)       # normal | mild | suspicious | danger
@@ -39,6 +39,9 @@ class Analysis(Base):
     confidence = Column(Float, nullable=True)
     gemini_explanation = Column(Text, nullable=True)
     skin_metrics = Column(JSON, nullable=True)         # 정량화 피부 지표
+    body_part = Column(String, nullable=True)            # 얼굴|팔|다리|등|가슴|배
+    smoking   = Column(Boolean, nullable=True)           # 흡연 여부
+    drinking  = Column(Boolean, nullable=True)           # 음주 여부
     recommend_visit = Column(Boolean, default=False)
     is_diagnostic = Column(Boolean, default=False)    # 항상 False
     created_at = Column(TIMESTAMP(timezone=True), default=_now)
