@@ -1,0 +1,2979 @@
+[
+  {
+    "id": "pmc_acne_review_ccby_overview",
+    "title": "Exploring Acne Treatments: From Pathophysiological Mechanisms to Emerging Therapies",
+    "source": "PMC Open Access article",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-24",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "acne_vulgaris",
+      "management",
+      "commercial_allowed"
+    ],
+    "chunk_text": "여드름은 모공 막힘, 피지, 염증 등 여러 요인이 함께 작용하는 흔한 피부 상태로 설명된다. 이미지 분류 결과는 병변 양상을 이해하는 보조 정보로 사용하고, 치료 선택은 병변의 범위, 통증, 흉터 위험, 지속 기간을 함께 고려해야 한다.",
+    "citation_note": "CC BY open access review used as general acne management background."
+  },
+  {
+    "id": "pmc_topical_review_ccby_mild_moderate",
+    "title": "Efficacy of Topical Treatments in the Management of Mild-to-Moderate Acne Vulgaris: A Systematic Review",
+    "source": "PMC Open Access article",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-24",
+    "class_tags": [
+      "Blackheads",
+      "Whiteheads",
+      "Papules",
+      "Pustules",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "comedonal_acne",
+      "inflammatory_acne",
+      "mild_moderate",
+      "management"
+    ],
+    "chunk_text": "면포성 병변과 가벼운 염증성 병변은 대개 자극을 줄이는 기본 피부 관리와 지속적인 관찰이 중요하다. 약물명이나 용량은 시스템이 직접 안내하지 않고, 필요 시 피부과에서 개인 상태에 따라 결정하도록 안내한다.",
+    "citation_note": "CC BY systematic review used for mild-to-moderate acne management context."
+  },
+  {
+    "id": "comedonal_acne_evidence_card",
+    "title": "Comedonal acne evidence card",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-24",
+    "class_tags": [
+      "Blackheads",
+      "Whiteheads"
+    ],
+    "topic_tags": [
+      "comedonal_acne",
+      "blackheads",
+      "whiteheads",
+      "management"
+    ],
+    "chunk_text": "블랙헤드와 화이트헤드는 면포성 여드름 범주로 묶어 안내한다. 핵심 관리는 과도한 세안, 스크럽, 압출을 피하고, 모공을 막을 수 있는 무거운 유분 제품을 줄이며, 악화 또는 지속 시 전문 진료를 권하는 것이다.",
+    "citation_note": "Project-authored summary for comedonal classes."
+  },
+  {
+    "id": "inflammatory_acne_evidence_card",
+    "title": "Inflammatory acne evidence card",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-24",
+    "class_tags": [
+      "Papules",
+      "Pustules"
+    ],
+    "topic_tags": [
+      "inflammatory_acne",
+      "papules",
+      "pustules",
+      "management"
+    ],
+    "chunk_text": "구진과 농포는 염증성 여드름 양상으로 보수적으로 안내한다. 병변을 짜면 염증, 색소침착, 흉터 위험이 커질 수 있어 자극을 줄이고, 통증이나 고름 증가, 빠른 확산이 있으면 피부과 상담을 권한다.",
+    "citation_note": "Project-authored summary for inflammatory acne classes."
+  },
+  {
+    "id": "deep_inflammatory_acne_evidence_card",
+    "title": "Deep inflammatory acne evidence card",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-24",
+    "class_tags": [
+      "Cyst"
+    ],
+    "topic_tags": [
+      "deep_inflammatory_acne",
+      "cyst",
+      "scar_risk",
+      "referral"
+    ],
+    "chunk_text": "낭종성 병변으로 분류된 경우에는 깊은 염증과 흉터 위험을 우선 고려한다. 이 시스템은 처방이나 자가 배농을 안내하지 않고, 통증이 있거나 반복되는 깊은 병변은 피부과 상담을 우선 권고한다.",
+    "citation_note": "Project-authored summary for cyst-like acne class."
+  },
+  {
+    "id": "red_flags_safety_card",
+    "title": "Acne red-flag and safety card",
+    "source": "Project-authored safety policy grounded in open acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-24",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "safety",
+      "red_flags",
+      "referral"
+    ],
+    "chunk_text": "심한 통증, 빠른 악화, 출혈, 발열, 심한 붓기, 넓게 퍼지는 고름, 흉터 위험, 반복되는 깊은 병변은 자가 관리보다 진료 판단을 우선해야 하는 신호로 안내한다.",
+    "citation_note": "Project-authored safety rule for conservative triage."
+  },
+  {
+    "id": "pmc_acne_scars_interventions_ccby",
+    "title": "From the Cochrane Library: Interventions for Acne Scars",
+    "source": "PMC Open Access article / JMIR Dermatology",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10334917/",
+    "license": "CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Cyst",
+      "Papules",
+      "Pustules",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "acne_scars",
+      "scar_risk",
+      "referral",
+      "management"
+    ],
+    "chunk_text": "여드름 흉터는 여드름 이후 남을 수 있는 중요한 합병증이며 신체적·심리적 부담을 줄 수 있다. 흉터 치료에는 여러 시술이 언급되지만 근거와 적합성은 개인 상태에 따라 달라질 수 있으므로, 흉터 위험이나 반복되는 깊은 염증 병변이 있으면 피부과 상담을 권한다.",
+    "citation_note": "CC BY open access article used for acne scar risk and referral context."
+  },
+  {
+    "id": "kdca_korean_acne_citation_only",
+    "title": "여드름",
+    "source": "국가건강정보포털 / 질병관리청",
+    "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=3947",
+    "license": "KOGL Type 4: attribution, non-commercial, no-derivatives",
+    "allowed_use": "citation_only",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "korean_source",
+      "public_health",
+      "acne_vulgaris",
+      "management",
+      "citation_only"
+    ],
+    "chunk_text": "질병관리청 국가건강정보포털의 국내 여드름 환자 정보 자료다. 공공누리 제4유형 조건이므로 상업 공개 가능성을 고려한 기본 RAG 원문 생성에는 사용하지 않고, 국내 신뢰 출처 표시와 검토용 citation-only 자료로 보관한다.",
+    "citation_note": "Domestic public-health source; citation-only because KOGL Type 4 restricts commercial use and derivatives."
+  },
+  {
+    "id": "kdca_healthinfo_copyright_policy",
+    "title": "국가건강정보포털 건강정보 저작권",
+    "source": "국가건강정보포털 / 질병관리청",
+    "url": "https://health.kdca.go.kr/healthinfo/biz/health/portalUseGuidance/hlthinsReqst/hlthinsReqstMth.do",
+    "license": "KOGL Type 4 policy: attribution, non-commercial, no-derivatives",
+    "allowed_use": "citation_only",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "license_policy"
+    ],
+    "topic_tags": [
+      "korean_source",
+      "licensing",
+      "kogl_type_4",
+      "citation_only"
+    ],
+    "chunk_text": "국가건강정보포털 건강정보는 공공누리 제4유형 조건을 확인해야 하며, 영리 목적 사용과 변경이 제한될 수 있다. 국내 자료를 RAG에 넣을 때 원문 저장 여부를 판단하는 라이선스 정책 자료로 사용한다.",
+    "citation_note": "Domestic source licensing policy; used to keep KDCA content citation-only in commercial-facing builds."
+  },
+  {
+    "id": "ann_dermatol_acne_grading_korea_citation_only",
+    "title": "A Comprehensive Review of the Acne Grading Scale in 2023",
+    "source": "Annals of Dermatology / Korean Dermatological Association",
+    "url": "https://anndermatol.org/search.php?code=0140AD&id=10.5021%2Fad.23.094&vmode=FULL&where=aview",
+    "license": "CC BY-NC 4.0",
+    "allowed_use": "citation_only",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "korean_source",
+      "grading",
+      "severity",
+      "clinical_assessment",
+      "citation_only"
+    ],
+    "chunk_text": "한국 피부과 학술지의 여드름 중증도 평가 문헌이다. CC BY-NC 조건이므로 상업 공개 가능성을 고려한 원문 RAG 저장 대상에서는 제외하고, 병변 등급·평가 기준 보강을 위한 citation-only 후보로 둔다.",
+    "citation_note": "Korean dermatology academic source; citation-only because license is non-commercial."
+  },
+  {
+    "id": "blackheads_open_comedone_card",
+    "title": "Blackheads as open comedones",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Blackheads"
+    ],
+    "topic_tags": [
+      "comedonal_acne",
+      "open_comedone",
+      "blackheads",
+      "classification"
+    ],
+    "chunk_text": "블랙헤드는 열린 면포 양상으로 설명하며, 염증성 병변으로 단정하지 않는다. 사용자가 통증, 붓기, 고름을 함께 호소하면 단순 면포 안내만 하지 않고 염증 또는 감염 가능성에 대한 진료 권고를 함께 제시한다.",
+    "citation_note": "Project-authored blackhead class card grounded in CC BY acne review."
+  },
+  {
+    "id": "whiteheads_closed_comedone_card",
+    "title": "Whiteheads as closed comedones",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Whiteheads"
+    ],
+    "topic_tags": [
+      "comedonal_acne",
+      "closed_comedone",
+      "whiteheads",
+      "classification"
+    ],
+    "chunk_text": "화이트헤드는 닫힌 면포 양상으로 안내한다. 압출이나 강한 스크럽은 자극과 염증 악화를 부를 수 있으므로 피하고, 반복되거나 염증성 병변으로 변하면 피부과 상담을 권한다.",
+    "citation_note": "Project-authored whitehead class card grounded in CC BY acne review."
+  },
+  {
+    "id": "comedonal_irritation_avoidance_card",
+    "title": "Comedonal acne irritation avoidance",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Blackheads",
+      "Whiteheads"
+    ],
+    "topic_tags": [
+      "comedonal_acne",
+      "management",
+      "irritation",
+      "self_care"
+    ],
+    "chunk_text": "면포성 병변에서는 과도한 세안, 반복적인 마찰, 강한 물리적 제거를 피하도록 안내한다. 새 제품을 여러 개 동시에 바꾸면 자극 여부를 판단하기 어려우므로 변화는 단계적으로 관찰하게 한다.",
+    "citation_note": "Project-authored care card grounded in CC BY mild-to-moderate acne review."
+  },
+  {
+    "id": "comedonal_persistent_referral_card",
+    "title": "Persistent comedonal acne referral trigger",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Blackheads",
+      "Whiteheads"
+    ],
+    "topic_tags": [
+      "comedonal_acne",
+      "persistent",
+      "referral",
+      "management"
+    ],
+    "chunk_text": "면포성 병변이라도 넓게 퍼지거나 오래 지속되거나 염증성 병변이 함께 나타나면 자가 관리만 반복하지 않도록 안내한다. 치료 선택은 병변 범위와 피부 자극 정도를 함께 고려해 진료에서 결정하도록 한다.",
+    "citation_note": "Project-authored referral card grounded in CC BY acne management review."
+  },
+  {
+    "id": "papules_inflammation_card",
+    "title": "Papules as inflammatory acne lesions",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Papules"
+    ],
+    "topic_tags": [
+      "inflammatory_acne",
+      "papules",
+      "classification",
+      "redness"
+    ],
+    "chunk_text": "구진은 고름이 뚜렷하지 않은 붉고 단단한 염증성 병변으로 안내한다. 통증, 빠른 증가, 넓은 염증이 동반되면 단순 피부 자극으로 축소하지 않고 피부과 상담 기준을 함께 제시한다.",
+    "citation_note": "Project-authored papule card grounded in CC BY acne review."
+  },
+  {
+    "id": "pustules_pus_card",
+    "title": "Pustules with visible pus",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Pustules"
+    ],
+    "topic_tags": [
+      "inflammatory_acne",
+      "pustules",
+      "pus",
+      "management"
+    ],
+    "chunk_text": "농포는 고름이 보이는 염증성 병변 양상으로 안내한다. 병변을 짜면 염증과 색소침착, 흉터 위험이 커질 수 있으므로 압출을 피하고, 고름이 늘거나 통증이 심하면 진료를 권한다.",
+    "citation_note": "Project-authored pustule card grounded in CC BY acne review."
+  },
+  {
+    "id": "papulopustular_progression_card",
+    "title": "Papulopustular acne symptom progression",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Papules",
+      "Pustules"
+    ],
+    "topic_tags": [
+      "inflammatory_acne",
+      "progression",
+      "symptoms",
+      "referral"
+    ],
+    "chunk_text": "구진 또는 농포로 분류되고 사용자가 병변이 늘어난다고 설명하면 염증 진행 가능성을 보수적으로 안내한다. 빠르게 퍼지는 양상은 자가 관리보다 진료 판단을 우선하도록 한다.",
+    "citation_note": "Project-authored progression card grounded in CC BY acne review."
+  },
+  {
+    "id": "pain_swelling_symptom_card",
+    "title": "Pain and swelling symptom card",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Papules",
+      "Pustules",
+      "Cyst",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "pain",
+      "swelling",
+      "red_flags",
+      "referral"
+    ],
+    "chunk_text": "통증과 붓기는 염증성 병변에서 중요하게 확인해야 할 증상이다. 심한 통증, 심한 붓기, 열감, 빠른 악화가 있으면 병변 클래스와 관계없이 진료 권고를 우선한다.",
+    "citation_note": "Project-authored symptom safety card grounded in CC BY acne review."
+  },
+  {
+    "id": "acne_multifactor_pathogenesis_card",
+    "title": "Multifactorial acne pathogenesis",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "acne_vulgaris",
+      "pathogenesis",
+      "sebum",
+      "inflammation"
+    ],
+    "chunk_text": "여드름은 피지, 모공 막힘, 미생물 환경, 염증 반응 등이 복합적으로 관여하는 피부 상태로 설명한다. 시스템은 단일 원인을 확정하지 않고 병변 양상과 증상에 맞춘 일반 정보를 제공한다.",
+    "citation_note": "Project-authored pathogenesis card grounded in CC BY acne review."
+  },
+  {
+    "id": "acne_distribution_context_card",
+    "title": "Common acne distribution context",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "acne_vulgaris",
+      "location",
+      "face",
+      "back",
+      "chest"
+    ],
+    "chunk_text": "여드름 병변은 얼굴뿐 아니라 목, 가슴, 등, 어깨 등 피지선이 발달한 부위에도 나타날 수 있다. 위치 정보가 입력되면 병변 범위와 반복 여부를 함께 확인하도록 안내한다.",
+    "citation_note": "Project-authored distribution card grounded in CC BY acne review."
+  },
+  {
+    "id": "acne_treatment_scope_card",
+    "title": "Treatment scope limitation card",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "safety",
+      "scope",
+      "treatment_decision",
+      "medical_disclaimer"
+    ],
+    "chunk_text": "여드름 치료 선택은 병변 종류, 범위, 지속 기간, 흉터 위험, 개인 피부 상태를 함께 고려해야 한다. 이 시스템은 약물명, 용량, 치료 변경 지시를 제공하지 않고 진료에서 결정할 문제로 남긴다.",
+    "citation_note": "Project-authored treatment scope card grounded in CC BY acne review."
+  },
+  {
+    "id": "no_medication_dose_policy_card",
+    "title": "No medication dose policy",
+    "source": "Project-authored safety policy grounded in open acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "safety",
+      "medication",
+      "dosage",
+      "medical_disclaimer"
+    ],
+    "chunk_text": "사용자가 약물이나 시술을 질문하더라도 시스템은 구체적인 처방, 용량, 사용 기간, 약물 변경을 안내하지 않는다. 대신 근거 출처와 함께 전문 진료에서 개인 상태에 맞춰 결정해야 한다고 답한다.",
+    "citation_note": "Project-authored medication safety policy."
+  },
+  {
+    "id": "acne_scarring_risk_card",
+    "title": "Acne scarring risk context",
+    "source": "Project-authored evidence card grounded in CC BY acne scar reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10334917/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Papules",
+      "Pustules",
+      "Cyst",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "acne_scars",
+      "scar_risk",
+      "referral",
+      "inflammation"
+    ],
+    "chunk_text": "염증성 여드름은 흉터 위험과 관련될 수 있으므로 흉터가 남는 느낌, 반복되는 깊은 병변, 넓은 염증이 있으면 진료 권고를 강화한다. 흉터 치료법을 직접 추천하기보다 피부과 평가를 권한다.",
+    "citation_note": "Project-authored scar risk card grounded in CC BY acne scar review."
+  },
+  {
+    "id": "cyst_depth_referral_card",
+    "title": "Cyst-like lesion depth and referral",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Cyst"
+    ],
+    "topic_tags": [
+      "deep_inflammatory_acne",
+      "cyst",
+      "pain",
+      "referral"
+    ],
+    "chunk_text": "Cyst로 분류된 병변은 깊고 아픈 염증성 병변 가능성을 보수적으로 다룬다. 자가 배농이나 강한 압출을 안내하지 않고, 통증·반복·흉터 위험이 있으면 피부과 상담을 우선한다.",
+    "citation_note": "Project-authored cyst referral card grounded in CC BY acne review."
+  },
+  {
+    "id": "recurrent_deep_lesions_card",
+    "title": "Recurrent deep lesion safety card",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10334917/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Cyst",
+      "Papules",
+      "Pustules"
+    ],
+    "topic_tags": [
+      "recurrent",
+      "deep_lesion",
+      "scar_risk",
+      "referral"
+    ],
+    "chunk_text": "깊은 병변이 반복되거나 같은 부위에 계속 생긴다는 설명은 흉터 위험과 장기 관리 필요성을 고려하게 한다. 사진 기록과 증상 변화 기록을 남기고 피부과에서 평가받도록 안내한다.",
+    "citation_note": "Project-authored recurrence and scar risk card."
+  },
+  {
+    "id": "psychosocial_impact_card",
+    "title": "Psychosocial impact of acne",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "quality_of_life",
+      "psychosocial",
+      "distress",
+      "referral"
+    ],
+    "chunk_text": "여드름은 외관뿐 아니라 자존감과 사회적 불편감에도 영향을 줄 수 있다. 사용자가 스트레스, 대인기피, 심한 불안을 언급하면 피부 증상 관리와 함께 전문 상담 또는 진료의 도움을 받을 수 있음을 안내한다.",
+    "citation_note": "Project-authored psychosocial impact card grounded in CC BY acne review."
+  },
+  {
+    "id": "self_manipulation_harm_card",
+    "title": "Avoid self-manipulation of acne lesions",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "self_care",
+      "picking",
+      "squeezing",
+      "scar_risk"
+    ],
+    "chunk_text": "병변을 짜거나 뜯는 행동은 염증 악화, 색소침착, 흉터 위험을 높일 수 있으므로 피하도록 안내한다. 특히 농포나 깊은 병변에서는 자가 압출보다 진료 판단을 우선한다.",
+    "citation_note": "Project-authored self-care safety card."
+  },
+  {
+    "id": "photo_monitoring_card",
+    "title": "Photo monitoring and follow-up card",
+    "source": "Project-authored safety policy grounded in open acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "follow_up",
+      "monitoring",
+      "symptom_tracking",
+      "referral"
+    ],
+    "chunk_text": "반복되거나 넓어지는 병변은 같은 조명과 거리에서 사진으로 변화를 기록하면 진료 시 설명에 도움이 될 수 있다. 빠르게 커지는 변화는 기록만 하지 말고 진료 권고를 우선한다.",
+    "citation_note": "Project-authored monitoring card."
+  },
+  {
+    "id": "gentle_cleansing_card",
+    "title": "Gentle cleansing guidance",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Blackheads",
+      "Whiteheads",
+      "Papules",
+      "Pustules",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "self_care",
+      "cleansing",
+      "irritation",
+      "management"
+    ],
+    "chunk_text": "일반 관리 안내에서는 강한 세정이나 스크럽보다 자극을 줄이는 세안과 관찰을 우선한다. 세안만으로 해결된다고 단정하지 않고, 지속·악화·통증이 있으면 진료 기준을 함께 제시한다.",
+    "citation_note": "Project-authored cleansing guidance grounded in CC BY acne review."
+  },
+  {
+    "id": "product_change_caution_card",
+    "title": "Caution with rapid product changes",
+    "source": "Project-authored evidence card grounded in CC BY acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "self_care",
+      "cosmetics",
+      "irritation",
+      "management"
+    ],
+    "chunk_text": "여러 화장품이나 세안제를 한꺼번에 바꾸면 어떤 제품이 자극을 주는지 판단하기 어렵다. 제품 변경은 단계적으로 관찰하도록 안내하고, 악화나 알레르기 의심 증상은 진료 상담을 권한다.",
+    "citation_note": "Project-authored product change safety card."
+  },
+  {
+    "id": "red_flag_fever_spreading_card",
+    "title": "Fever and spreading inflammation red flag",
+    "source": "Project-authored safety policy grounded in open acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "red_flags",
+      "fever",
+      "spreading",
+      "infection",
+      "referral"
+    ],
+    "chunk_text": "발열, 넓게 퍼지는 붓기, 빠르게 확산되는 고름이나 홍반은 단순 관리 안내로 끝내지 않는다. 감염 가능성을 배제할 수 없으므로 신속한 진료 상담을 권한다.",
+    "citation_note": "Project-authored red-flag policy card."
+  },
+  {
+    "id": "red_flag_bleeding_rapid_worsening_card",
+    "title": "Bleeding and rapid worsening red flag",
+    "source": "Project-authored safety policy grounded in open acne reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "Project text; source evidence CC BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "red_flags",
+      "bleeding",
+      "rapid_worsening",
+      "referral"
+    ],
+    "chunk_text": "출혈, 갑작스러운 크기 변화, 빠른 악화가 있으면 일반 여드름 관리만 안내하지 않는다. 병변 분류 결과가 면포성으로 나와도 증상 설명이 위험 신호이면 진료 권고를 우선한다.",
+    "citation_note": "Project-authored red-flag policy card."
+  },
+  {
+    "id": "blackheads_beneficial_management_card",
+    "title": "Beneficial management for blackheads",
+    "source": "Project-authored management card grounded in CC BY acne reviews and official patient guidance",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Blackheads"
+    ],
+    "topic_tags": [
+      "beneficial_management",
+      "blackheads",
+      "comedonal_acne",
+      "noncomedogenic",
+      "cleansing"
+    ],
+    "chunk_text": "블랙헤드 관리에서는 병변을 짜서 제거하려 하기보다 자극이 적은 세안, 모공을 막지 않는 제품 선택, 과도한 스크럽 회피를 우선한다. 통증이 없고 국소적이면 관찰과 생활 관리가 도움이 될 수 있지만, 염증·고름·빠른 증가가 생기면 피부과 상담을 권한다.",
+    "citation_note": "Class-specific management card for blackheads."
+  },
+  {
+    "id": "whiteheads_beneficial_management_card",
+    "title": "Beneficial management for whiteheads",
+    "source": "Project-authored management card grounded in CC BY acne reviews and official patient guidance",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Whiteheads"
+    ],
+    "topic_tags": [
+      "beneficial_management",
+      "whiteheads",
+      "comedonal_acne",
+      "noncomedogenic",
+      "cleansing"
+    ],
+    "chunk_text": "화이트헤드 관리에서는 닫힌 면포를 억지로 압출하지 않고, 순한 세안과 비면포성 제품 사용으로 자극과 모공 막힘을 줄이는 방향을 안내한다. 좁쌀 같은 병변이 넓어지거나 붉어지고 아파지면 염증성 변화 가능성을 고려해 진료 상담을 권한다.",
+    "citation_note": "Class-specific management card for whiteheads."
+  },
+  {
+    "id": "papules_beneficial_management_card",
+    "title": "Beneficial management for papules",
+    "source": "Project-authored management card grounded in CC BY acne reviews and official patient guidance",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Papules"
+    ],
+    "topic_tags": [
+      "beneficial_management",
+      "papules",
+      "inflammatory_acne",
+      "irritation",
+      "referral"
+    ],
+    "chunk_text": "구진 관리에서는 붉고 단단한 부위를 반복적으로 누르거나 문지르지 않도록 안내한다. 자극을 줄이는 세안과 제품 단순화가 도움이 될 수 있으며, 통증·붓기·빠른 증가가 있으면 자가 관리보다 피부과 상담을 우선한다.",
+    "citation_note": "Class-specific management card for papules."
+  },
+  {
+    "id": "pustules_beneficial_management_card",
+    "title": "Beneficial management for pustules",
+    "source": "Project-authored management card grounded in CC BY acne reviews and official patient guidance",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Pustules"
+    ],
+    "topic_tags": [
+      "beneficial_management",
+      "pustules",
+      "pus",
+      "inflammatory_acne",
+      "referral"
+    ],
+    "chunk_text": "농포 관리에서는 고름이 보여도 짜거나 터뜨리지 않는 것이 중요하다. 부드러운 세안과 자극 최소화를 유지하고, 고름 증가·심한 통증·넓게 퍼지는 붓기·발열이 있으면 감염 가능성을 배제할 수 없어 진료 상담을 권한다.",
+    "citation_note": "Class-specific management card for pustules."
+  },
+  {
+    "id": "cyst_beneficial_management_card",
+    "title": "Beneficial management for cyst-like lesions",
+    "source": "Project-authored management card grounded in CC BY acne reviews and acne scar evidence",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10334917/",
+    "license": "Project text; source evidence CC BY 4.0; patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Cyst"
+    ],
+    "topic_tags": [
+      "beneficial_management",
+      "cyst",
+      "deep_inflammatory_acne",
+      "scar_risk",
+      "referral"
+    ],
+    "chunk_text": "낭종성 병변처럼 깊고 아픈 병변은 흉터 위험을 우선 고려해 자가 압출, 강한 필링, 자가 배농을 피하도록 안내한다. 같은 부위에서 반복되거나 깊게 만져지거나 흉터가 걱정되면 사진 기록을 남기고 피부과 상담을 앞당긴다.",
+    "citation_note": "Class-specific management card for cyst-like lesions."
+  },
+  {
+    "id": "noncomedogenic_product_benefit_card",
+    "title": "Non-comedogenic product selection benefit",
+    "source": "Project-authored management card grounded in CC BY acne reviews and official patient guidance",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Blackheads",
+      "Whiteheads",
+      "Papules",
+      "Pustules",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "beneficial_management",
+      "noncomedogenic",
+      "cosmetics",
+      "moisturizer",
+      "sunscreen"
+    ],
+    "chunk_text": "일반 관리에서는 모공을 막을 수 있는 무거운 유분 제품을 줄이고, 비면포성 또는 모공을 막지 않는다고 표시된 보습제·자외선차단제·화장품을 선택하도록 안내할 수 있다. 특정 브랜드나 제품을 추천하지 않고 자극 여부를 관찰하게 한다.",
+    "citation_note": "Product-selection management card."
+  },
+  {
+    "id": "skin_barrier_support_card",
+    "title": "Skin barrier support during acne care",
+    "source": "Project-authored management card grounded in CC BY acne reviews and official patient guidance",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "beneficial_management",
+      "skin_barrier",
+      "moisturizer",
+      "irritation",
+      "self_care"
+    ],
+    "chunk_text": "여드름 관리에서는 피부 장벽을 과도하게 손상시키지 않는 것이 중요하다. 따가움이나 건조가 심해지면 제품 수를 줄이고 순한 보습과 자극 회피를 우선하며, 증상이 지속되면 진료 상담을 권한다.",
+    "citation_note": "Skin-barrier support management card."
+  },
+  {
+    "id": "sweat_hair_makeup_management_card",
+    "title": "Sweat, hair, and makeup management",
+    "source": "Project-authored management card grounded in CC BY acne reviews and official patient guidance",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "beneficial_management",
+      "sweat",
+      "hair",
+      "makeup",
+      "cleansing"
+    ],
+    "chunk_text": "땀, 머리카락, 메이크업 잔여물이 병변 부위를 자극하지 않도록 운동 후 부드럽게 씻고, 머리 제품이나 유분이 얼굴 병변에 닿는 것을 줄이도록 안내한다. 세게 문지르는 세정은 피한다.",
+    "citation_note": "Sweat, hair, and makeup management card."
+  },
+  {
+    "id": "selfcare_timeline_referral_card",
+    "title": "When self-care is not enough",
+    "source": "Project-authored management card grounded in CC BY acne reviews and official patient guidance",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "beneficial_management",
+      "persistent",
+      "follow_up",
+      "referral"
+    ],
+    "chunk_text": "기본 관리에도 병변이 지속되거나 반복 악화되면 관리가 부족해서가 아니라 개인 상태에 맞는 치료 판단이 필요할 수 있음을 안내한다. 오랜 지속, 넓은 범위, 통증, 흉터 우려가 있으면 피부과 상담을 권한다.",
+    "citation_note": "Self-care limitation and referral card."
+  },
+  {
+    "id": "comedonal_ingredient_options_card",
+    "title": "Ingredient options for comedonal acne",
+    "source": "Project-authored ingredient card grounded in CC BY acne treatment reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; official patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Blackheads",
+      "Whiteheads"
+    ],
+    "topic_tags": [
+      "beneficial_ingredients",
+      "active_ingredients",
+      "comedonal_acne",
+      "salicylic_acid",
+      "adapalene",
+      "retinoid"
+    ],
+    "chunk_text": "블랙헤드와 화이트헤드 같은 면포성 병변에서는 살리실산(BHA)과 아다팔렌 등 레티노이드 계열 성분이 제품 선택 후보로 언급될 수 있다. 이 시스템은 용량이나 사용 횟수를 안내하지 않고, 자극·건조·따가움이 있으면 사용을 늘리기보다 진료 상담을 권한다.",
+    "citation_note": "Ingredient options for comedonal acne; no dosing or product recommendation."
+  },
+  {
+    "id": "blackheads_ingredient_options_card",
+    "title": "Ingredient options for blackheads",
+    "source": "Project-authored ingredient card grounded in CC BY acne treatment reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; official patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Blackheads"
+    ],
+    "topic_tags": [
+      "beneficial_ingredients",
+      "blackheads",
+      "salicylic_acid",
+      "noncomedogenic",
+      "retinoid"
+    ],
+    "chunk_text": "블랙헤드에서는 모공 막힘을 줄이는 방향의 성분 후보로 살리실산(BHA)과 레티노이드 계열이 언급될 수 있다. 동시에 비면포성 보습제와 자외선차단제를 선택하도록 안내하며, 강한 스크럽이나 반복 압출은 피한다.",
+    "citation_note": "Blackhead ingredient card; no dosing or brand advice."
+  },
+  {
+    "id": "whiteheads_ingredient_options_card",
+    "title": "Ingredient options for whiteheads",
+    "source": "Project-authored ingredient card grounded in CC BY acne treatment reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; official patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Whiteheads"
+    ],
+    "topic_tags": [
+      "beneficial_ingredients",
+      "whiteheads",
+      "salicylic_acid",
+      "adapalene",
+      "noncomedogenic"
+    ],
+    "chunk_text": "화이트헤드에서는 닫힌 면포가 자극으로 염증성 병변으로 변하지 않도록 살리실산(BHA), 아다팔렌 계열, 비면포성 제품 선택을 성분 참고 후보로 안내할 수 있다. 피부가 따갑거나 건조하면 성분을 추가하기보다 자극을 줄이도록 한다.",
+    "citation_note": "Whitehead ingredient card; no dosing or brand advice."
+  },
+  {
+    "id": "inflammatory_ingredient_options_card",
+    "title": "Ingredient options for inflammatory acne",
+    "source": "Project-authored ingredient card grounded in CC BY acne treatment reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; official patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Papules",
+      "Pustules"
+    ],
+    "topic_tags": [
+      "beneficial_ingredients",
+      "active_ingredients",
+      "inflammatory_acne",
+      "benzoyl_peroxide",
+      "azelaic_acid",
+      "adapalene"
+    ],
+    "chunk_text": "구진과 농포 같은 염증성 병변에서는 벤조일퍼옥사이드, 아젤라익산, 아다팔렌 같은 성분이 근거 문헌에서 자주 언급된다. 다만 이 시스템은 처방·용량·사용 빈도를 정하지 않으며, 통증·고름 증가·빠른 확산이 있으면 피부과 상담을 우선한다.",
+    "citation_note": "Ingredient options for inflammatory acne; no dosing or product recommendation."
+  },
+  {
+    "id": "papules_ingredient_options_card",
+    "title": "Ingredient options for papules",
+    "source": "Project-authored ingredient card grounded in CC BY acne treatment reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; official patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Papules"
+    ],
+    "topic_tags": [
+      "beneficial_ingredients",
+      "papules",
+      "benzoyl_peroxide",
+      "azelaic_acid",
+      "adapalene",
+      "irritation"
+    ],
+    "chunk_text": "구진에서는 염증을 동반한 병변 특성을 고려해 벤조일퍼옥사이드, 아젤라익산, 아다팔렌 계열을 성분 참고 후보로 언급할 수 있다. 붉고 아픈 병변에는 자극을 줄이는 것이 중요하므로 여러 활성 성분을 한꺼번에 겹치지 않도록 안내한다.",
+    "citation_note": "Papule ingredient card; no dosing or brand advice."
+  },
+  {
+    "id": "pustules_ingredient_options_card",
+    "title": "Ingredient options for pustules",
+    "source": "Project-authored ingredient card grounded in CC BY acne treatment reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; official patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Pustules"
+    ],
+    "topic_tags": [
+      "beneficial_ingredients",
+      "pustules",
+      "pus",
+      "benzoyl_peroxide",
+      "azelaic_acid",
+      "adapalene"
+    ],
+    "chunk_text": "농포에서는 고름이 보이더라도 짜지 않는 것이 우선이며, 성분 후보로는 벤조일퍼옥사이드, 아젤라익산, 아다팔렌 계열이 언급될 수 있다. 고름 증가, 넓은 붓기, 발열, 심한 통증은 성분 선택보다 진료 판단을 우선한다.",
+    "citation_note": "Pustule ingredient card; no dosing or brand advice."
+  },
+  {
+    "id": "cyst_ingredient_limitations_card",
+    "title": "Ingredient limitations for cyst-like lesions",
+    "source": "Project-authored ingredient safety card grounded in CC BY acne reviews and acne scar evidence",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10334917/",
+    "license": "Project text; source evidence CC BY 4.0; official patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "Cyst"
+    ],
+    "topic_tags": [
+      "beneficial_ingredients",
+      "ingredient_safety",
+      "cyst",
+      "deep_inflammatory_acne",
+      "scar_risk"
+    ],
+    "chunk_text": "Cyst처럼 깊고 통증이 있는 병변은 일반 성분만으로 해결하려고 안내하지 않는다. 진료 전까지는 순한 세안제, 비면포성 보습제와 자외선차단제처럼 자극을 줄이는 성분 선택을 중심으로 안내하고, 흉터 위험 때문에 피부과 상담을 우선한다.",
+    "citation_note": "Ingredient limitation card for cyst-like lesions."
+  },
+  {
+    "id": "ingredient_combination_safety_card",
+    "title": "Safety when combining acne active ingredients",
+    "source": "Project-authored ingredient safety card grounded in CC BY acne treatment reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; official patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "beneficial_ingredients",
+      "ingredient_safety",
+      "irritation",
+      "skin_barrier",
+      "active_ingredients"
+    ],
+    "chunk_text": "여드름 성분을 선택할 때 여러 활성 성분을 동시에 많이 추가하면 건조, 따가움, 장벽 손상이 생길 수 있다. 이 시스템은 조합법이나 횟수를 지시하지 않고, 새 성분은 단계적으로 관찰하며 자극이 심하면 진료 상담을 권한다.",
+    "citation_note": "General safety card for active ingredient combinations."
+  },
+  {
+    "id": "pregnancy_retinoid_caution_card",
+    "title": "Retinoid caution for pregnancy and special situations",
+    "source": "Project-authored ingredient safety card grounded in acne treatment reviews and official patient guidance",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; official patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "beneficial_ingredients",
+      "ingredient_safety",
+      "retinoid",
+      "pregnancy",
+      "referral"
+    ],
+    "chunk_text": "레티노이드 계열 성분은 임신 중이거나 임신 가능성이 있거나 수유 중인 경우 스스로 선택하지 말고 의료진과 상담하도록 안내한다. 이 시스템은 개인 상황별 안전성을 판단하지 않는다.",
+    "citation_note": "Retinoid special-situation caution card."
+  },
+  {
+    "id": "niacinamide_supportive_ingredient_card",
+    "title": "Supportive ingredient context for niacinamide",
+    "source": "Project-authored ingredient card grounded in CC BY acne treatment reviews",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "Project text; source evidence CC BY 4.0; official patient guidance kept citation-only",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "beneficial_ingredients",
+      "niacinamide",
+      "nicotinamide",
+      "skin_barrier",
+      "supportive_care"
+    ],
+    "chunk_text": "나이아신아마이드 또는 니코틴아마이드는 일부 여드름 관련 문헌에서 보조 성분으로 언급될 수 있다. 다만 단독 치료 효과를 과장하지 않고, 자극을 줄이는 보조 관리 성분 정도로 설명한다.",
+    "citation_note": "Supportive ingredient card; avoids overclaiming."
+  },
+  {
+    "id": "aad_acne_skin_care_tips_citation_only",
+    "title": "Acne: Tips for managing",
+    "source": "American Academy of Dermatology",
+    "url": "https://www.aad.org/public/diseases/acne/skin-care/tips",
+    "license": "Copyrighted patient guidance; reuse terms not cleared for source-text RAG",
+    "allowed_use": "citation_only",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "official_patient_guidance",
+      "beneficial_management",
+      "citation_only"
+    ],
+    "chunk_text": "미국피부과학회 환자용 여드름 관리 팁이다. 저작권 재사용 조건을 별도 확인하지 않았으므로 원문 RAG 저장에는 사용하지 않고, 관리법 검토와 출처 표시용 citation-only 자료로 둔다.",
+    "citation_note": "Official dermatology patient guidance; citation-only."
+  },
+  {
+    "id": "nhs_acne_self_help_citation_only",
+    "title": "Acne",
+    "source": "NHS",
+    "url": "https://www.nhs.uk/conditions/acne/",
+    "license": "NHS website content; reuse terms must be checked before source-text RAG",
+    "allowed_use": "citation_only",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "official_patient_guidance",
+      "self_help",
+      "beneficial_management",
+      "citation_only"
+    ],
+    "chunk_text": "NHS의 여드름 환자 정보와 자가 관리 안내다. 원문 재사용 조건을 별도 확인하지 않았으므로 기본 RAG 원문 생성에서는 제외하고 citation-only 자료로 둔다.",
+    "citation_note": "Official health-service patient guidance; citation-only."
+  },
+  {
+    "id": "mayo_acne_selfcare_citation_only",
+    "title": "Acne - Diagnosis and treatment",
+    "source": "Mayo Clinic",
+    "url": "https://www.mayoclinic.org/diseases-conditions/acne/diagnosis-treatment/drc-20368048",
+    "license": "Copyrighted patient guidance; reuse terms not cleared for source-text RAG",
+    "allowed_use": "citation_only",
+    "last_checked": "2026-05-25",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "patient_guidance",
+      "self_care",
+      "beneficial_management",
+      "citation_only"
+    ],
+    "chunk_text": "Mayo Clinic의 여드름 진단·치료 및 자가 관리 안내다. 원문 재사용 조건을 별도 확인하지 않았으므로 기본 RAG 원문 생성에서는 제외하고 citation-only 자료로 둔다.",
+    "citation_note": "Clinical patient guidance; citation-only."
+  },
+  {
+    "id": "niams_acne_types_public_domain",
+    "title": "Acne",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/acne/basics/more-info",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "blackhead",
+      "whitehead",
+      "papule",
+      "pustule",
+      "cystnnodule",
+      "complexacne",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "acne_vulgaris",
+      "classification",
+      "comedonal_acne",
+      "inflammatory_acne",
+      "deep_inflammatory_acne",
+      "complex_acne",
+      "hierarchical_14node"
+    ],
+    "chunk_text": "NIAMS의 여드름 공식 문서는 블랙헤드와 화이트헤드를 면포성 병변으로, 구진과 농포를 염증성 병변으로, 결절과 낭종성 병변을 더 깊고 통증이 있을 수 있는 병변으로 구분한다. 복합 여드름은 여러 병변 양상이 함께 보이거나 단일 클래스가 명확하지 않을 때 보수적으로 안내한다.",
+    "citation_note": "Public-domain NIAMS source used for acne lesion taxonomy."
+  },
+  {
+    "id": "niams_acne_worsening_factors_public_domain",
+    "title": "Acne",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/acne/basics/more-info",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "blackhead",
+      "whitehead",
+      "papule",
+      "pustule",
+      "cystnnodule",
+      "complexacne",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "acne_vulgaris",
+      "beneficial_management",
+      "self_care",
+      "irritation",
+      "safety"
+    ],
+    "chunk_text": "여드름 관리에서는 병변을 짜거나 과도하게 문지르는 행동이 악화 요인이 될 수 있다. 기본 안내는 손대지 않기, 자극 줄이기, 병변 변화 기록, 깊고 아픈 병변이나 흉터 위험이 있으면 진료 상담으로 연결하는 방향으로 구성한다.",
+    "citation_note": "Public-domain NIAMS source used for conservative acne care framing."
+  },
+  {
+    "id": "complex_acne_triage_public_domain",
+    "title": "Acne",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/acne/basics/more-info",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "complexacne",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "complex_acne",
+      "triage",
+      "mixed_lesions",
+      "referral",
+      "hierarchical_14node"
+    ],
+    "chunk_text": "복합-미분류 여드름은 면포, 구진, 농포, 결절성 병변이 섞이거나 이미지상 한 병변형으로 확정하기 어려운 경우를 위한 보수적 클래스다. RAG 응답은 단일 치료 방향을 단정하지 않고, 우세한 양상, 반복 여부, 통증, 흉터 위험을 확인하도록 안내한다.",
+    "citation_note": "Public-domain NIAMS acne taxonomy adapted to project mixed-acne class."
+  },
+  {
+    "id": "complex_acne_ingredient_safety_card",
+    "title": "Acne",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/acne/basics/more-info",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "complexacne",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "complex_acne",
+      "beneficial_ingredients",
+      "ingredient_safety",
+      "self_care"
+    ],
+    "chunk_text": "복합 양상에서는 한 가지 활성 성분을 정답처럼 제시하지 않는다. 기본 루틴을 순한 세안제, 비면포성 보습제, 자외선 차단 중심으로 단순화하고, 활성 성분은 한 번에 하나씩 도입해 악화 여부를 관찰하도록 안내한다.",
+    "citation_note": "Public-domain NIAMS source supports conservative acne self-care boundaries."
+  },
+  {
+    "id": "milia_ccby_definition_card",
+    "title": "Milia En Plaque Associated With Prayer-Related Frictional Changes",
+    "source": "Cureus via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12145066/",
+    "license": "Creative Commons Attribution License CC-BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "milia"
+    ],
+    "topic_tags": [
+      "milia",
+      "classification",
+      "keratinous_cyst",
+      "hierarchical_14node"
+    ],
+    "chunk_text": "비립종은 작고 흰색 또는 노란색의 각질성 낭종처럼 보일 수 있는 병변으로 설명한다. 영상 분류만으로 확정 진단하지 않고, 눈 주변·반복·다발·염증 동반 병변은 전문 진료로 연결한다.",
+    "citation_note": "CC BY PMC article used for milia description with conservative wording."
+  },
+  {
+    "id": "milia_ingredient_safety_card",
+    "title": "Milia En Plaque Associated With Prayer-Related Frictional Changes",
+    "source": "Cureus via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12145066/",
+    "license": "Creative Commons Attribution License CC-BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "milia"
+    ],
+    "topic_tags": [
+      "milia",
+      "beneficial_ingredients",
+      "ingredient_safety",
+      "self_care"
+    ],
+    "chunk_text": "비립종 의심 병변은 강한 압출이나 바늘 제거를 안내하지 않는다. 성분 안내는 두껍고 밀폐감이 큰 제형을 줄이고, 순한 세안과 가벼운 보습으로 자극을 줄이는 정도로 제한한다.",
+    "citation_note": "CC BY PMC article used with project safety policy for non-procedural care."
+  },
+  {
+    "id": "milia_statpearls_citation_only",
+    "title": "Milia",
+    "source": "StatPearls, NCBI Bookshelf",
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK560481/",
+    "license": "NCBI Bookshelf/StatPearls reuse terms not cleared for source-text RAG",
+    "allowed_use": "citation_only",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "milia"
+    ],
+    "topic_tags": [
+      "milia",
+      "clinical_reference",
+      "citation_only"
+    ],
+    "chunk_text": "StatPearls의 Milia 문서는 임상 참고 가치가 있지만 원문 재사용 조건을 별도로 확인하지 않았으므로 기본 RAG 원문 생성에서는 제외하고 citation-only 자료로 둔다.",
+    "citation_note": "Clinical reference retained as citation-only."
+  },
+  {
+    "id": "niams_rosacea_overview_public_domain",
+    "title": "Rosacea",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/rosacea",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "rosacea"
+    ],
+    "topic_tags": [
+      "rosacea",
+      "classification",
+      "redness",
+      "flushing",
+      "ocular_symptoms",
+      "hierarchical_14node"
+    ],
+    "chunk_text": "주사는 코와 뺨 중심의 붉음, 반복적 홍조, 발진, 여드름처럼 보이는 병변, 혈관 확장, 피부 두꺼워짐, 눈 자극이 함께 나타날 수 있는 만성 염증성 피부 상태로 설명한다. RAG 응답은 여드름과 혼동될 수 있음을 밝히고 눈 증상은 진료 권고로 연결한다.",
+    "citation_note": "Public-domain NIAMS rosacea overview."
+  },
+  {
+    "id": "niams_rosacea_management_public_domain",
+    "title": "Rosacea: Diagnosis, Treatment, and Steps to Take",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/rosacea/diagnosis-treatment-and-steps-to-take",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "rosacea"
+    ],
+    "topic_tags": [
+      "rosacea",
+      "beneficial_management",
+      "triggers",
+      "sun_protection",
+      "self_care",
+      "referral"
+    ],
+    "chunk_text": "주사 관리 안내는 개인별 유발 요인 기록, 민감 피부용 세안제와 보습제, 자외선 차단, 눈 증상 확인을 포함한다. 고정된 처방 대신 증상 유형에 따라 의료진이 치료를 맞춘다는 점을 강조한다.",
+    "citation_note": "Public-domain NIAMS rosacea management page."
+  },
+  {
+    "id": "niams_rosacea_ingredient_safety_card",
+    "title": "Rosacea: Diagnosis, Treatment, and Steps to Take",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/rosacea/diagnosis-treatment-and-steps-to-take",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "rosacea"
+    ],
+    "topic_tags": [
+      "rosacea",
+      "beneficial_ingredients",
+      "ingredient_safety",
+      "sensitive_skin",
+      "sun_protection"
+    ],
+    "chunk_text": "주사 의심 양상에서는 향료와 알코올감이 강한 제품, 스크럽, 강한 필링 성분을 피하고 민감 피부용 세안제, 보습제, 얼굴용 자외선차단제를 우선 안내한다. 약물 성분은 진료 기반으로만 언급한다.",
+    "citation_note": "Public-domain NIAMS rosacea self-care page."
+  },
+  {
+    "id": "seborrheic_ccby_overview_card",
+    "title": "Seborrheic Dermatitis and Dandruff: A Comprehensive Review",
+    "source": "Journal of Clinical & Investigative Dermatology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4852869/",
+    "license": "Creative Commons Attribution License",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "seborrheic",
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_condition",
+      "seborrheic_dermatitis",
+      "dandruff",
+      "malassezia",
+      "classification",
+      "hierarchical_14node"
+    ],
+    "chunk_text": "지루성 피부염과 비듬은 피지선이 많은 부위에서 나타나는 연속적인 스펙트럼으로 설명할 수 있다. 지루 경향은 기름진 각질, 가려움, 붉음이 반복되는 부위와 함께 보수적으로 안내하고, 심하거나 반복되면 진료 상담으로 연결한다.",
+    "citation_note": "CC BY PMC review used for seborrheic spectrum framing."
+  },
+  {
+    "id": "seborrheic_management_ccby_card",
+    "title": "Seborrheic Dermatitis and Dandruff: A Comprehensive Review",
+    "source": "Journal of Clinical & Investigative Dermatology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4852869/",
+    "license": "Creative Commons Attribution License",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "seborrheic",
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_condition",
+      "seborrheic_dermatitis",
+      "beneficial_management",
+      "self_care",
+      "referral"
+    ],
+    "chunk_text": "지루성 병변 안내는 두피, 눈썹, 코 주변, 귀 주변처럼 피지선이 많은 반복 부위를 기록하게 하고, 긁거나 떼어내는 자극을 줄이는 방향으로 구성한다. 진물, 눈 주변 염증, 넓은 확산, 지속적 가려움은 진료 권고에 포함한다.",
+    "citation_note": "CC BY PMC review used for management framing without dose guidance."
+  },
+  {
+    "id": "seborrheic_ingredient_safety_ccby_card",
+    "title": "Seborrheic Dermatitis and Dandruff: A Comprehensive Review",
+    "source": "Journal of Clinical & Investigative Dermatology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4852869/",
+    "license": "Creative Commons Attribution License",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "seborrheic",
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_condition",
+      "seborrheic_dermatitis",
+      "beneficial_ingredients",
+      "ingredient_safety"
+    ],
+    "chunk_text": "지루성 피부염 의심 양상에서는 항진균·항염 치료가 문헌에서 다루어지지만, RAG 응답은 약물명·용량 지시를 피한다. 기본 성분 안내는 자극이 적은 세정과 보습, 향료와 강한 각질 제거제 주의로 제한한다.",
+    "citation_note": "CC BY PMC review supports conservative ingredient-safety boundaries."
+  },
+  {
+    "id": "niams_atopic_overview_public_domain",
+    "title": "Atopic Dermatitis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/atopic-dermatitis/basics/diagnosis-treatment-and-steps-to-take",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "atopic"
+    ],
+    "topic_tags": [
+      "atopic_dermatitis",
+      "eczema",
+      "itch",
+      "skin_barrier",
+      "classification",
+      "hierarchical_14node"
+    ],
+    "chunk_text": "아토피 피부염은 가려움, 건조, 붉음, 피부 장벽 손상과 관련된 만성 염증성 피부 상태로 안내한다. 긁음은 피부 손상과 감염 위험을 높일 수 있으므로 보습과 자극 회피를 중심으로 설명한다.",
+    "citation_note": "Public-domain NIAMS atopic dermatitis page."
+  },
+  {
+    "id": "niams_atopic_management_public_domain",
+    "title": "Atopic Dermatitis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/atopic-dermatitis/basics/diagnosis-treatment-and-steps-to-take",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "atopic"
+    ],
+    "topic_tags": [
+      "atopic_dermatitis",
+      "beneficial_management",
+      "moisturizer",
+      "trigger_avoidance",
+      "referral"
+    ],
+    "chunk_text": "아토피 피부염 의심 양상에서는 규칙적인 보습, 뜨거운 물과 강한 세정제 회피, 향료 등 자극 요인 줄이기를 안내한다. 진물, 딱지, 심한 통증, 갑작스러운 악화는 감염이나 악화 가능성 때문에 진료가 필요하다.",
+    "citation_note": "Public-domain NIAMS atopic dermatitis management page."
+  },
+  {
+    "id": "niams_atopic_ingredient_safety_public_domain",
+    "title": "Atopic Dermatitis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/atopic-dermatitis/basics/diagnosis-treatment-and-steps-to-take",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "atopic"
+    ],
+    "topic_tags": [
+      "atopic_dermatitis",
+      "beneficial_ingredients",
+      "ingredient_safety",
+      "moisturizer",
+      "skin_barrier"
+    ],
+    "chunk_text": "아토피 피부염 의심 양상에서는 장벽 보조 보습 성분과 순한 보습제를 우선 안내하고, 향료, 에센셜오일, 강한 산 성분, 고농도 레티노이드처럼 따가움을 유발할 수 있는 성분은 주의시킨다.",
+    "citation_note": "Public-domain NIAMS source supports barrier-focused ingredient guidance."
+  },
+  {
+    "id": "niams_psoriasis_overview_public_domain",
+    "title": "Psoriasis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/psoriasis",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "psoriasis"
+    ],
+    "topic_tags": [
+      "psoriasis",
+      "classification",
+      "scaly_plaque",
+      "inflammation",
+      "hierarchical_14node"
+    ],
+    "chunk_text": "건선은 면역 반응과 관련된 만성 피부 상태로, 두껍고 붉은 인설성 병변이 팔꿈치, 무릎, 두피, 몸통 등에 생길 수 있다. RAG 응답은 확정 진단을 피하고 만성·재발성 가능성과 진료 필요성을 함께 안내한다.",
+    "citation_note": "Public-domain NIAMS psoriasis page."
+  },
+  {
+    "id": "niams_psoriasis_management_public_domain",
+    "title": "Psoriasis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/psoriasis",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "psoriasis"
+    ],
+    "topic_tags": [
+      "psoriasis",
+      "beneficial_management",
+      "triggers",
+      "joint_symptoms",
+      "referral"
+    ],
+    "chunk_text": "건선 의심 양상에서는 피부 손상, 스트레스, 감염 등 악화 요인을 기록하고 보습으로 건조와 균열을 줄이는 방향을 안내한다. 손발톱 변화, 넓은 범위, 관절 통증이나 뻣뻣함이 있으면 진료 상담을 권고한다.",
+    "citation_note": "Public-domain NIAMS psoriasis management and risk page."
+  },
+  {
+    "id": "niams_psoriasis_ingredient_safety_public_domain",
+    "title": "Psoriasis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/psoriasis",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "psoriasis"
+    ],
+    "topic_tags": [
+      "psoriasis",
+      "beneficial_ingredients",
+      "ingredient_safety",
+      "moisturizer"
+    ],
+    "chunk_text": "건선 의심 병변의 성분 안내는 보습으로 건조와 균열을 줄이는 수준에 둔다. 두꺼운 인설을 강제로 제거하거나 강한 필링 성분을 반복 사용하는 것은 피하고, 치료 성분은 진료 기반으로 결정한다.",
+    "citation_note": "Public-domain NIAMS source supports conservative moisturizer-first guidance."
+  },
+  {
+    "id": "normal_skin_basic_care_public_domain",
+    "title": "Health Lesson: Learning About Skin",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/kids/healthy-skin",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "normal"
+    ],
+    "topic_tags": [
+      "normal_skin",
+      "skin_barrier",
+      "basic_care",
+      "beneficial_management",
+      "hierarchical_14node"
+    ],
+    "chunk_text": "정상 분류는 뚜렷한 병변이 보이지 않는다는 의미일 뿐, 앞으로 생기는 변화까지 배제하지 않는다. 기본 안내는 순한 세안, 보습, 자외선 차단, 새 변화 기록으로 제한하고 불필요한 활성 성분 추가를 권하지 않는다.",
+    "citation_note": "Public-domain NIAMS skin education page used for normal-skin baseline."
+  },
+  {
+    "id": "normal_skin_ingredient_safety_public_domain",
+    "title": "Health Lesson: Learning About Skin",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/kids/healthy-skin",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "normal"
+    ],
+    "topic_tags": [
+      "normal_skin",
+      "beneficial_ingredients",
+      "ingredient_safety",
+      "skin_barrier"
+    ],
+    "chunk_text": "정상 분류에서는 치료 성분을 새로 권하기보다 피부 장벽을 유지하는 기본 제품을 안내한다. 고농도 산, 레티노이드, 스크럽 등은 병변이 없을 때 불필요한 자극을 만들 수 있어 주의한다.",
+    "citation_note": "Public-domain NIAMS source used for basic skin-care boundaries."
+  },
+  {
+    "id": "cdc_abnormal_skin_change_public_domain",
+    "title": "Symptoms of Skin Cancer",
+    "source": "CDC",
+    "url": "https://www.cdc.gov/skin-cancer/symptoms/index.html",
+    "license": "Most CDC text is public domain; attribution required",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "abnormal"
+    ],
+    "topic_tags": [
+      "abnormal_uncertain",
+      "red_flags",
+      "skin_change",
+      "referral",
+      "beneficial_management",
+      "self_care",
+      "hierarchical_14node"
+    ],
+    "chunk_text": "비정상·미분류 병변은 지원 클래스 중 하나로 단정하기 어려운 경우이므로, 새로 생긴 병변, 잘 낫지 않는 상처, 기존 병변의 변화 같은 위험 신호를 확인하게 한다. 변화가 빠르거나 출혈·통증·색 변화가 있으면 의료진 평가를 권고한다.",
+    "citation_note": "Public-domain CDC page used for abnormal skin-change red flags."
+  },
+  {
+    "id": "abnormal_uncertain_ingredient_safety_public_domain",
+    "title": "Symptoms of Skin Cancer",
+    "source": "CDC",
+    "url": "https://www.cdc.gov/skin-cancer/symptoms/index.html",
+    "license": "Most CDC text is public domain; attribution required",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "abnormal"
+    ],
+    "topic_tags": [
+      "abnormal_uncertain",
+      "beneficial_ingredients",
+      "ingredient_safety",
+      "safety"
+    ],
+    "chunk_text": "미분류 병변에는 특정 활성 성분을 권하지 않고 자극을 줄이는 기본 보습과 변화 기록을 안내한다. 출혈, 빠른 변화, 통증, 색·크기·모양 변화가 있으면 성분 사용보다 의료진 평가가 우선이다.",
+    "citation_note": "Public-domain CDC page supports red-flag-first guidance."
+  },
+  {
+    "id": "hierarchical_14node_dataset_plan_citation_only",
+    "title": "Hierarchical Multi-head Skin Lesion Dataset Plan",
+    "source": "Project-provided dataset table",
+    "url": "local_project_dataset_plan",
+    "license": "Project metadata; Kaggle, Roboflow, AIHub, and DermNet dataset licenses must be checked separately before redistribution",
+    "allowed_use": "citation_only",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "blackhead",
+      "whitehead",
+      "papule",
+      "pustule",
+      "cystnnodule",
+      "complexacne",
+      "milia",
+      "rosacea",
+      "seborrheic",
+      "sebdermatitis",
+      "atopic",
+      "psoriasis",
+      "normal",
+      "abnormal"
+    ],
+    "topic_tags": [
+      "hierarchical_14node",
+      "dataset_schema",
+      "license_review_required",
+      "citation_only"
+    ],
+    "chunk_text": "프로젝트 v2 분류 체계는 blackhead, whitehead, papule, pustule, cystnnodule, complexacne, milia, rosacea, seborrheic, sebdermatitis, atopic, psoriasis, normal, abnormal의 14개 노드로 구성된다. 원천 이미지 데이터셋의 재배포·상업 활용 가능성은 각 제공처의 라이선스를 별도로 확인해야 하므로 원문 RAG 근거로 사용하지 않는다.",
+    "citation_note": "Project schema record only; excluded from generation by default."
+  },
+  {
+    "id": "nci_reuse_policy",
+    "title": "Reuse of NCI Information Policy",
+    "source": "National Cancer Institute",
+    "url": "https://www.cancer.gov/policies/copyright-reuse",
+    "license": "Most NCI text is free of copyright unless otherwise indicated",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-05-24",
+    "class_tags": [
+      "license_policy"
+    ],
+    "topic_tags": [
+      "licensing",
+      "public_domain"
+    ],
+    "chunk_text": "NCI 자료는 별도 표시가 없는 텍스트의 재사용이 가능하다는 정책을 제공한다. v2에서 피부종양·흑색종 RAG를 추가할 때 우선 검토할 수 있는 공식 출처다.",
+    "citation_note": "License policy reference, mainly for future skin tumor extension."
+  },
+  {
+    "id": "cdc_agency_materials_policy",
+    "title": "Use of Agency Materials",
+    "source": "CDC",
+    "url": "https://www.cdc.gov/other/agencymaterials.html",
+    "license": "Most CDC/ATSDR information is public domain; attribution required",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-05-24",
+    "class_tags": [
+      "license_policy"
+    ],
+    "topic_tags": [
+      "licensing",
+      "public_domain"
+    ],
+    "chunk_text": "CDC 자료는 대부분 공공영역으로 재사용 가능하다는 정책을 제공한다. 피부암 예방, 자외선, 공중보건 안내를 추가할 때 우선 검토할 수 있는 공식 출처다.",
+    "citation_note": "License policy reference for public-domain source strategy."
+  },
+  {
+    "id": "nice_ng198_citation_only",
+    "title": "Acne vulgaris: management (NG198)",
+    "source": "NICE",
+    "url": "https://www.nice.org.uk/guidance/ng198",
+    "license": "NICE guidance; reuse terms must be checked before public reuse",
+    "allowed_use": "citation_only",
+    "last_checked": "2026-05-24",
+    "class_tags": [
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "guideline",
+      "acne_vulgaris",
+      "citation_only"
+    ],
+    "chunk_text": "NICE NG198은 여드름 관리 지침으로 참고 가치가 높지만, 본 v1 코퍼스에서는 원문 재사용 대상이 아니라 출처 확인용 citation-only 자료로만 둔다.",
+    "citation_note": "Citation-only guideline reference; excluded from generation by default."
+  },
+  {
+    "id": "complex_acne_mixed_pattern_public_domain",
+    "title": "Acne",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/acne/basics/more-info",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "complexacne",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "complex_acne",
+      "mixed_lesions",
+      "classification",
+      "beneficial_management"
+    ],
+    "chunk_text": "??-??? ???? ??? ??? ??? ??? ??? ???? ??? ?? ??? ??? ??? ??? ????. ??? ? ?? ????? ???? ?? ?? ??? ??? ???? ?? ???? ?? ????.",
+    "citation_note": "NIAMS acne taxonomy supports mixed acne framing."
+  },
+  {
+    "id": "complex_acne_deep_or_inflammatory_priority_public_domain",
+    "title": "Acne",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/acne/basics/more-info",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "complexacne",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "complex_acne",
+      "deep_inflammatory_acne",
+      "red_flags",
+      "referral"
+    ],
+    "chunk_text": "?? ?? ?? ?? ?? ??? ??, ??, ?? ??, ?? ??? ???? ?? ?? ???? ?? ??? ??? ????. ??? ?? ??? ????? ?? ??? ???? ? ??? ??.",
+    "citation_note": "Public-domain NIAMS acne source used for triage hierarchy."
+  },
+  {
+    "id": "complex_acne_routine_simplification_public_domain",
+    "title": "Acne",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/acne/basics/more-info",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "complexacne",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "complex_acne",
+      "self_care",
+      "irritation",
+      "beneficial_management"
+    ],
+    "chunk_text": "?? ????? ??? ?? ??? ???? ??? ?? ??? ??? ????? ???? ???. ?? ??? ?? ??, ???? ??, ??? ?? ???? ????? ????? ????.",
+    "citation_note": "Public-domain NIAMS acne source used for conservative routine guidance."
+  },
+  {
+    "id": "complex_acne_avoid_picking_public_domain",
+    "title": "Acne",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/acne/basics/more-info",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "complexacne",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "complex_acne",
+      "self_care",
+      "scar_risk",
+      "beneficial_management"
+    ],
+    "chunk_text": "?? ????? ?? ??? ????? ??? ??? ??? ?? ??? ?? ? ??. RAG ??? ??? ??, ?? ???, ?? ?? ??? ?? ???? ????.",
+    "citation_note": "Public-domain NIAMS acne source used for picking and scar-risk guidance."
+  },
+  {
+    "id": "milia_small_keratin_cyst_ccby",
+    "title": "Milia En Plaque Associated With Prayer-Related Frictional Changes",
+    "source": "Cureus via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12145066/",
+    "license": "Creative Commons Attribution License CC-BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "milia"
+    ],
+    "topic_tags": [
+      "milia",
+      "classification",
+      "keratinous_cyst"
+    ],
+    "chunk_text": "??? ?? ??? ?? ?? ?? ???? ??? ??? ???? ?? ? ??. ??? ?? ??? ?? ??? ???, ??? ?? ??? ?? ????? ????.",
+    "citation_note": "CC BY PMC milia article used for lesion description."
+  },
+  {
+    "id": "milia_periocular_caution_ccby",
+    "title": "Milia En Plaque Associated With Prayer-Related Frictional Changes",
+    "source": "Cureus via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12145066/",
+    "license": "Creative Commons Attribution License CC-BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "milia"
+    ],
+    "topic_tags": [
+      "milia",
+      "periocular",
+      "referral",
+      "safety"
+    ],
+    "chunk_text": "? ???? ?? ?? ??? ??? ?? ??? ?? ???? ?? ??? ???? ???. ????? ???? ???? ????? ??? ?? ???? ????? ????.",
+    "citation_note": "CC BY PMC milia article used for periocular safety guidance."
+  },
+  {
+    "id": "milia_friction_irritation_ccby",
+    "title": "Milia En Plaque Associated With Prayer-Related Frictional Changes",
+    "source": "Cureus via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12145066/",
+    "license": "Creative Commons Attribution License CC-BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "milia"
+    ],
+    "topic_tags": [
+      "milia",
+      "irritation",
+      "friction",
+      "beneficial_management"
+    ],
+    "chunk_text": "???? ??? ???? ?? ??? ???? ???? ??? ? ??. ?? ??? ?? ???, ?? ??, ??? ??? ??? ???? ????.",
+    "citation_note": "CC BY PMC milia article used for friction and irritation guidance."
+  },
+  {
+    "id": "milia_differential_caution_ccby",
+    "title": "Milia En Plaque Associated With Prayer-Related Frictional Changes",
+    "source": "Cureus via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12145066/",
+    "license": "Creative Commons Attribution License CC-BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "milia"
+    ],
+    "topic_tags": [
+      "milia",
+      "differential",
+      "referral",
+      "safety"
+    ],
+    "chunk_text": "?? ? ????? ??, ??, ? ??, ????? ??? ??? ?? ????? ???? ???. RAG ??? ?? ???? ?? ?? ??? ?? ????.",
+    "citation_note": "CC BY PMC milia article used for conservative differential framing."
+  },
+  {
+    "id": "milia_gentle_routine_ccby",
+    "title": "Milia En Plaque Associated With Prayer-Related Frictional Changes",
+    "source": "Cureus via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12145066/",
+    "license": "Creative Commons Attribution License CC-BY 4.0",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "milia"
+    ],
+    "topic_tags": [
+      "milia",
+      "beneficial_ingredients",
+      "ingredient_safety",
+      "self_care"
+    ],
+    "chunk_text": "??? ?? ???? ?? ??? ?? ???? ??? ??? ?? ??? ??. ??? ???? ? ??? ??? ?? ?? ???? ??? ???? ????? ????.",
+    "citation_note": "CC BY PMC milia article supports conservative non-procedural guidance."
+  },
+  {
+    "id": "rosacea_chronic_recurrence_public_domain",
+    "title": "Rosacea",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/rosacea",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "rosacea"
+    ],
+    "topic_tags": [
+      "rosacea",
+      "chronic",
+      "recurrence",
+      "beneficial_management"
+    ],
+    "chunk_text": "??? ??? ??? ?? ? ?? ?? ?? ??? ????. ? ?? ???? ???? ?? ??, ????, ?? ??, ?? ??? ?? ???? ??.",
+    "citation_note": "Public-domain NIAMS rosacea source used for chronic-course framing."
+  },
+  {
+    "id": "rosacea_trigger_diary_public_domain",
+    "title": "Rosacea: Diagnosis, Treatment, and Steps to Take",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/rosacea/diagnosis-treatment-and-steps-to-take",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "rosacea"
+    ],
+    "topic_tags": [
+      "rosacea",
+      "triggers",
+      "beneficial_management",
+      "self_care"
+    ],
+    "chunk_text": "?? ????? ??? ?? ?? ??? ????. ??, ?, ?? ??, ??, ????, ?? ??? ?? ? ?? ??? ????? ????.",
+    "citation_note": "Public-domain NIAMS rosacea management page used for trigger tracking."
+  },
+  {
+    "id": "rosacea_photoprotection_public_domain",
+    "title": "Rosacea: Diagnosis, Treatment, and Steps to Take",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/rosacea/diagnosis-treatment-and-steps-to-take",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "rosacea"
+    ],
+    "topic_tags": [
+      "rosacea",
+      "sun_protection",
+      "beneficial_ingredients",
+      "ingredient_safety"
+    ],
+    "chunk_text": "?? ?? ????? ???? ?? ??? ? ? ???? ??? ??????? ?? ??? ?? ??? ????. ???? ?? ?? ??? ??? ?? ????? ????.",
+    "citation_note": "Public-domain NIAMS rosacea management page used for photoprotection guidance."
+  },
+  {
+    "id": "rosacea_ocular_referral_public_domain",
+    "title": "Rosacea",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/rosacea",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "rosacea"
+    ],
+    "topic_tags": [
+      "rosacea",
+      "ocular_symptoms",
+      "red_flags",
+      "referral"
+    ],
+    "chunk_text": "?? ???? ? ??, ???, ???, ??? ??? ???? ?? ????? ???? ???. ? ??? ??? ?? ???? ??? ????.",
+    "citation_note": "Public-domain NIAMS rosacea overview used for ocular-symptom referral."
+  },
+  {
+    "id": "rosacea_acne_overlap_public_domain",
+    "title": "Rosacea",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/rosacea",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "rosacea"
+    ],
+    "topic_tags": [
+      "rosacea",
+      "acne_overlap",
+      "classification",
+      "safety"
+    ],
+    "chunk_text": "??? ????? ??? ???? ??? ??? ? ?? ???? ??? ? ??. RAG ??? ?? ???? ???? ?? ??? ?? ??? ???? ??? ?? ???? ????.",
+    "citation_note": "Public-domain NIAMS rosacea source used for acne-overlap caution."
+  },
+  {
+    "id": "seborrheic_sebaceous_area_ccby",
+    "title": "Seborrheic Dermatitis and Dandruff: A Comprehensive Review",
+    "source": "Journal of Clinical & Investigative Dermatology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4852869/",
+    "license": "Creative Commons Attribution License",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "seborrheic",
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_condition",
+      "seborrheic_dermatitis",
+      "classification",
+      "sebaceous_area"
+    ],
+    "chunk_text": "??? ??? ???? ?? ??, ?? ??, ??, ? ??, ? ?? ??? ??? ? ??. ?? ???? RAG ???? ?? ???? ????.",
+    "citation_note": "CC BY PMC review used for sebaceous-area pattern guidance."
+  },
+  {
+    "id": "seborrheic_dandruff_spectrum_ccby",
+    "title": "Seborrheic Dermatitis and Dandruff: A Comprehensive Review",
+    "source": "Journal of Clinical & Investigative Dermatology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4852869/",
+    "license": "Creative Commons Attribution License",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "seborrheic",
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_condition",
+      "seborrheic_dermatitis",
+      "dandruff",
+      "classification"
+    ],
+    "chunk_text": "??? ??? ???? ???? ?? ???? ???? ???? ?????? ??? ? ??. ?? ???? ??? ???? ????? ??? ????.",
+    "citation_note": "CC BY PMC review used for dandruff-SD spectrum framing."
+  },
+  {
+    "id": "seborrheic_pruritus_scaling_ccby",
+    "title": "Seborrheic Dermatitis and Dandruff: A Comprehensive Review",
+    "source": "Journal of Clinical & Investigative Dermatology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4852869/",
+    "license": "Creative Commons Attribution License",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "seborrheic",
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_condition",
+      "seborrheic_dermatitis",
+      "itch",
+      "scaling",
+      "beneficial_management"
+    ],
+    "chunk_text": "??? ??? ???, ???, ?? ?? ??, ??? ??? ? ??. ?? ??? ??? ???? ??? ??? ?? ??? ?? ??? ????? ????.",
+    "citation_note": "CC BY PMC review used for itch and scaling guidance."
+  },
+  {
+    "id": "seborrheic_malassezia_context_ccby",
+    "title": "Seborrheic Dermatitis and Dandruff: A Comprehensive Review",
+    "source": "Journal of Clinical & Investigative Dermatology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4852869/",
+    "license": "Creative Commons Attribution License",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "seborrheic",
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_condition",
+      "seborrheic_dermatitis",
+      "malassezia",
+      "pathophysiology"
+    ],
+    "chunk_text": "??? ??? ??? ??, ?? ?? ???, ?? ???, ?? ??? ?? ??? ? ??? ???. RAG ??? ??? ??? ???? ?? ?? ?? ????? ????.",
+    "citation_note": "CC BY PMC review used for multifactorial pathophysiology framing."
+  },
+  {
+    "id": "seborrheic_recurrence_ccby",
+    "title": "Seborrheic Dermatitis and Dandruff: A Comprehensive Review",
+    "source": "Journal of Clinical & Investigative Dermatology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4852869/",
+    "license": "Creative Commons Attribution License",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "seborrheic",
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_condition",
+      "seborrheic_dermatitis",
+      "recurrence",
+      "beneficial_management"
+    ],
+    "chunk_text": "??? ???? ??? ??? ?? ? ?? ?? ???? ?? ??? ???? ??? ????. ?? ???? ?? ???? ?? ???? ?? ??? ????.",
+    "citation_note": "CC BY PMC review used for recurrence and referral guidance."
+  },
+  {
+    "id": "sebdermatitis_face_scalp_distinction_ccby",
+    "title": "Seborrheic Dermatitis and Dandruff: A Comprehensive Review",
+    "source": "Journal of Clinical & Investigative Dermatology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4852869/",
+    "license": "Creative Commons Attribution License",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_dermatitis",
+      "scalp",
+      "face",
+      "classification"
+    ],
+    "chunk_text": "??? ???? ??? ???? ?? ???? ??? ???? ?? ???? ??? ? ??. ?? ????? ???, ??, ?????? ??? ? ?? ?? ??? ???.",
+    "citation_note": "CC BY PMC review used for face and scalp distribution guidance."
+  },
+  {
+    "id": "sebdermatitis_avoid_harsh_scrubbing_ccby",
+    "title": "Seborrheic Dermatitis and Dandruff: A Comprehensive Review",
+    "source": "Journal of Clinical & Investigative Dermatology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4852869/",
+    "license": "Creative Commons Attribution License",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_dermatitis",
+      "self_care",
+      "irritation",
+      "beneficial_management"
+    ],
+    "chunk_text": "??? ??? ?? ??? ??? ??? ????? ???? ??? ??? ?? ? ??. ?? ??? ??? ?? ??? ?? ??? ???.",
+    "citation_note": "CC BY PMC review used for irritation-avoidance guidance."
+  },
+  {
+    "id": "sebdermatitis_medicated_care_boundary_ccby",
+    "title": "Seborrheic Dermatitis and Dandruff: A Comprehensive Review",
+    "source": "Journal of Clinical & Investigative Dermatology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4852869/",
+    "license": "Creative Commons Attribution License",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_dermatitis",
+      "ingredient_safety",
+      "treatment_boundary"
+    ],
+    "chunk_text": "??? ??? ?? ??? ??? ?? ?? ??? ????, RAG ??? ????????? ??? ???? ???. ??? ????? ??? ???? ??? ???? ?? ???? ??.",
+    "citation_note": "CC BY PMC review used for treatment-boundary policy."
+  },
+  {
+    "id": "atopic_chronic_itch_public_domain",
+    "title": "Atopic Dermatitis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/atopic-dermatitis/basics/diagnosis-treatment-and-steps-to-take",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "atopic"
+    ],
+    "topic_tags": [
+      "atopic_dermatitis",
+      "itch",
+      "chronic",
+      "classification"
+    ],
+    "chunk_text": "??? ??? ?? ??? ???? ???, ??, ??, ?? ??? ?? ????. RAG ??? ??? ??? ?? ??? ???? ????.",
+    "citation_note": "Public-domain NIAMS atopic dermatitis page used for itch-focused framing."
+  },
+  {
+    "id": "atopic_moisturizer_regular_use_public_domain",
+    "title": "Atopic Dermatitis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/atopic-dermatitis/basics/diagnosis-treatment-and-steps-to-take",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "atopic"
+    ],
+    "topic_tags": [
+      "atopic_dermatitis",
+      "moisturizer",
+      "beneficial_management",
+      "beneficial_ingredients"
+    ],
+    "chunk_text": "??? ??? ?? ????? ???? ??? ?? ??? ????. ??? ?? ??? ?? ???? ??? ??? ?? ???? ???? ????.",
+    "citation_note": "Public-domain NIAMS atopic dermatitis page used for moisturizer guidance."
+  },
+  {
+    "id": "atopic_trigger_avoidance_public_domain",
+    "title": "Atopic Dermatitis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/atopic-dermatitis/basics/diagnosis-treatment-and-steps-to-take",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "atopic"
+    ],
+    "topic_tags": [
+      "atopic_dermatitis",
+      "triggers",
+      "self_care",
+      "beneficial_management"
+    ],
+    "chunk_text": "??? ?????? ??? ?, ?? ???, ??, ?? ??, ?, ???? ? ??? ?? ??? ???? ??? ????. ???? ?? ?? ??? ?? ??? ????? ????.",
+    "citation_note": "Public-domain NIAMS atopic dermatitis page used for trigger guidance."
+  },
+  {
+    "id": "atopic_infection_warning_public_domain",
+    "title": "Atopic Dermatitis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/atopic-dermatitis/basics/diagnosis-treatment-and-steps-to-take",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "atopic"
+    ],
+    "topic_tags": [
+      "atopic_dermatitis",
+      "red_flags",
+      "infection",
+      "referral"
+    ],
+    "chunk_text": "??? ??? ?? ??? ??, ??, ??, ??, ??? ??? ??? ???? ?? ?? ???? ???? ??. ? ?? ?? ???? ?? ??? ????.",
+    "citation_note": "Public-domain NIAMS atopic dermatitis page used for infection red flags."
+  },
+  {
+    "id": "atopic_barrier_ingredient_safety_public_domain",
+    "title": "Atopic Dermatitis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/atopic-dermatitis/basics/diagnosis-treatment-and-steps-to-take",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "atopic"
+    ],
+    "topic_tags": [
+      "atopic_dermatitis",
+      "skin_barrier",
+      "beneficial_ingredients",
+      "ingredient_safety"
+    ],
+    "chunk_text": "??? ??? ?? ???? ?? ??? ?? ?? ??? ?? ??? ????. ??? ?, ?????, ???, ???? ???? ??? ? ?? ??? ????.",
+    "citation_note": "Public-domain NIAMS atopic dermatitis page used for barrier ingredient safety."
+  },
+  {
+    "id": "atopic_long_term_management_public_domain",
+    "title": "Atopic Dermatitis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/atopic-dermatitis/basics/diagnosis-treatment-and-steps-to-take",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "atopic"
+    ],
+    "topic_tags": [
+      "atopic_dermatitis",
+      "long_term",
+      "beneficial_management"
+    ],
+    "chunk_text": "??? ???? ??? ??? ?? ? ?? ?? ????? ?? ??? ???? ???. RAG ??? ??? ??, ?? ?? ??, ?? ? ?? ??? ?? ????.",
+    "citation_note": "Public-domain NIAMS atopic dermatitis page used for long-term care framing."
+  },
+  {
+    "id": "psoriasis_plaque_distribution_public_domain",
+    "title": "Psoriasis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/psoriasis",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "psoriasis"
+    ],
+    "topic_tags": [
+      "psoriasis",
+      "plaque",
+      "classification",
+      "scaly_plaque"
+    ],
+    "chunk_text": "?? ?? ??? ??? ?? ??? ??? ?? ? ??? ??, ???, ??, ?? ? ??? ??? ??? ? ??. ??? ?? ??? ?? ??? ??? ?? ???? ????.",
+    "citation_note": "Public-domain NIAMS psoriasis page used for plaque distribution guidance."
+  },
+  {
+    "id": "psoriasis_nail_joint_public_domain",
+    "title": "Psoriasis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/psoriasis",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "psoriasis"
+    ],
+    "topic_tags": [
+      "psoriasis",
+      "nail",
+      "joint_symptoms",
+      "referral",
+      "red_flags"
+    ],
+    "chunk_text": "?? ?? ???? ??? ??, ?? ??, ?? ???? ??? ?? ??? ?? ?? ??? ??? ????. ?? ??? ??? ???? ?? ?? ???.",
+    "citation_note": "Public-domain NIAMS psoriasis page used for nail and joint symptom referral."
+  },
+  {
+    "id": "psoriasis_trigger_tracking_public_domain",
+    "title": "Psoriasis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/psoriasis",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "psoriasis"
+    ],
+    "topic_tags": [
+      "psoriasis",
+      "triggers",
+      "beneficial_management",
+      "self_care"
+    ],
+    "chunk_text": "?? ?? ??? ????, ??, ?? ?? ?? ?? ??? ? ?? ?? ??? ????? ????. ??? ??? ???? ??? ??? ??.",
+    "citation_note": "Public-domain NIAMS psoriasis page used for trigger tracking."
+  },
+  {
+    "id": "psoriasis_moisturizer_public_domain",
+    "title": "Psoriasis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/psoriasis",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "psoriasis"
+    ],
+    "topic_tags": [
+      "psoriasis",
+      "moisturizer",
+      "beneficial_ingredients",
+      "ingredient_safety"
+    ],
+    "chunk_text": "?? ?? ??? ?? ?? ??? ???? ??, ??, ??? ??? ? ??. ?? ???? ??? ?? ??? ??? ?? ????? RAG?? ???? ???.",
+    "citation_note": "Public-domain NIAMS psoriasis page used for moisturizer-first guidance."
+  },
+  {
+    "id": "psoriasis_avoid_trauma_public_domain",
+    "title": "Psoriasis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/psoriasis",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "psoriasis"
+    ],
+    "topic_tags": [
+      "psoriasis",
+      "trauma",
+      "irritation",
+      "beneficial_management"
+    ],
+    "chunk_text": "?? ?? ????? ??? ??? ??? ??? ?? ??? ???? ??? ????. ??? ??? ?? ??? ???? ?? ? ??.",
+    "citation_note": "Public-domain NIAMS psoriasis page used for trauma-avoidance guidance."
+  },
+  {
+    "id": "psoriasis_chronic_referral_public_domain",
+    "title": "Psoriasis",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/psoriasis",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "psoriasis"
+    ],
+    "topic_tags": [
+      "psoriasis",
+      "chronic",
+      "referral",
+      "beneficial_management"
+    ],
+    "chunk_text": "??? ?????? ??? ?? ? ?? ?? ??, ?? ??, ???? ??? ??? ?? ??? ????. RAG ??? ?? ?? ?? ???? ?? ????.",
+    "citation_note": "Public-domain NIAMS psoriasis page used for chronic-care and referral guidance."
+  },
+  {
+    "id": "normal_skin_monitoring_public_domain",
+    "title": "Health Lesson: Learning About Skin",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/kids/healthy-skin",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "normal"
+    ],
+    "topic_tags": [
+      "normal_skin",
+      "monitoring",
+      "beneficial_management"
+    ],
+    "chunk_text": "?? ??? ?? ????? ??? ??? ??? ???? ???, ?? ??? ???? ??? ???. ? ?, ? ??, ??, ??? ??? ???? ????.",
+    "citation_note": "Public-domain NIAMS skin education page used for monitoring guidance."
+  },
+  {
+    "id": "normal_skin_barrier_baseline_public_domain",
+    "title": "Health Lesson: Learning About Skin",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/kids/healthy-skin",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "normal"
+    ],
+    "topic_tags": [
+      "normal_skin",
+      "skin_barrier",
+      "beneficial_management"
+    ],
+    "chunk_text": "?? ?? ??? ???? ?? ?? ??? ??? ??. ?? ??, ??, ??? ??? ???? ???? ?? ??? ???? ????.",
+    "citation_note": "Public-domain NIAMS skin education page used for baseline barrier care."
+  },
+  {
+    "id": "normal_skin_sun_protection_public_domain",
+    "title": "Health Lesson: Learning About Skin",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/kids/healthy-skin",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "normal"
+    ],
+    "topic_tags": [
+      "normal_skin",
+      "sun_protection",
+      "beneficial_ingredients",
+      "ingredient_safety"
+    ],
+    "chunk_text": "?? ????? ??? ??? ?? ??? ??? ? ??. ??? ?? ?? ?? ?? ???? ???? ?????? ?? ?? ??? ????.",
+    "citation_note": "Public-domain NIAMS skin education page used for sun-protection baseline."
+  },
+  {
+    "id": "normal_skin_unnecessary_actives_public_domain",
+    "title": "Health Lesson: Learning About Skin",
+    "source": "NIAMS",
+    "url": "https://www.niams.nih.gov/health-topics/kids/healthy-skin",
+    "license": "NIAMS website text is public domain; images may have separate restrictions",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "normal"
+    ],
+    "topic_tags": [
+      "normal_skin",
+      "ingredient_safety",
+      "self_care"
+    ],
+    "chunk_text": "?? ???? ??? ?, ?????, ??? ? ?? ??? ?? ???? ???? ??? ??? ?? ? ??. RAG? ? ?? ???? ?? ???? ?? ??? ????.",
+    "citation_note": "Public-domain NIAMS skin education page used for unnecessary-active caution."
+  },
+  {
+    "id": "abnormal_nonhealing_bleeding_public_domain",
+    "title": "Symptoms of Skin Cancer",
+    "source": "CDC",
+    "url": "https://www.cdc.gov/skin-cancer/symptoms/index.html",
+    "license": "Most CDC text is public domain; attribution required",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "abnormal"
+    ],
+    "topic_tags": [
+      "abnormal_uncertain",
+      "nonhealing",
+      "bleeding",
+      "red_flags",
+      "referral",
+      "beneficial_management"
+    ],
+    "chunk_text": "??????? ???? ? ?? ?? ??, ?? ??, ?? ??? ??? ?? ?? ???? ?? ???. RAG ??? ?? ???? ??? ??? ?? ????.",
+    "citation_note": "Public-domain CDC page used for nonhealing and bleeding red flags."
+  },
+  {
+    "id": "abnormal_color_shape_change_public_domain",
+    "title": "Symptoms of Skin Cancer",
+    "source": "CDC",
+    "url": "https://www.cdc.gov/skin-cancer/symptoms/index.html",
+    "license": "Most CDC text is public domain; attribution required",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "abnormal"
+    ],
+    "topic_tags": [
+      "abnormal_uncertain",
+      "color_change",
+      "shape_change",
+      "red_flags",
+      "referral"
+    ],
+    "chunk_text": "?, ??, ??? ???? ??? ??????? ????? ?? ?? ????. ???? ?? ??? ??? ???? ????? ??? ? ??? ????.",
+    "citation_note": "Public-domain CDC page used for changing-lesion red flags."
+  },
+  {
+    "id": "abnormal_no_active_ingredient_public_domain",
+    "title": "Symptoms of Skin Cancer",
+    "source": "CDC",
+    "url": "https://www.cdc.gov/skin-cancer/symptoms/index.html",
+    "license": "Most CDC text is public domain; attribution required",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "abnormal"
+    ],
+    "topic_tags": [
+      "abnormal_uncertain",
+      "beneficial_ingredients",
+      "ingredient_safety",
+      "safety"
+    ],
+    "chunk_text": "??????? ???? ??, ??, ??? ?? ??? ?? ???? ???. ??? ?? ??? ??? ???? ??? ???? ?? ??? ?? ??? ????.",
+    "citation_note": "Public-domain CDC page used for no-active-ingredient safety boundary."
+  },
+  {
+    "id": "abnormal_photo_tracking_public_domain",
+    "title": "Symptoms of Skin Cancer",
+    "source": "CDC",
+    "url": "https://www.cdc.gov/skin-cancer/symptoms/index.html",
+    "license": "Most CDC text is public domain; attribution required",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-03",
+    "class_tags": [
+      "abnormal"
+    ],
+    "topic_tags": [
+      "abnormal_uncertain",
+      "photo_tracking",
+      "self_care",
+      "beneficial_management"
+    ],
+    "chunk_text": "??? ??? ?? ??? ???? ??? ??? ??? ?? ???? ?? ??? ??? ??. ?? ??, ??, ??? ??? ??? ?? ?? ??? ????.",
+    "citation_note": "Public-domain CDC page used for change-tracking guidance."
+  },
+  {
+    "id": "complex_acne_pmc_mixed_severity_context",
+    "title": "Efficacy of Topical Treatments in the Management of Mild-to-Moderate Acne Vulgaris: A Systematic Review",
+    "source": "PMC Open Access article",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11081083/",
+    "license": "CC BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "complexacne",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "complex_acne",
+      "mixed_lesions",
+      "management",
+      "beneficial_management"
+    ],
+    "chunk_text": "?? ??? ??? ?????????? ??? ?? ???? ?? ??, ?? ??? ???? ?? ?? ??? ??? ? ??? ????. ?? ???? ?? ????? ???? ???.",
+    "citation_note": "CC BY acne treatment review used to diversify complex-acne source evidence."
+  },
+  {
+    "id": "complex_acne_pmc_irritation_safety",
+    "title": "Exploring Acne Treatments: From Pathophysiological Mechanisms to Emerging Therapies",
+    "source": "PMC Open Access article",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11121268/",
+    "license": "CC BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "complexacne",
+      "all_acne_classes"
+    ],
+    "topic_tags": [
+      "complex_acne",
+      "irritation",
+      "ingredient_safety",
+      "safety"
+    ],
+    "chunk_text": "?? ????? ?? ?? ??? ??? ???? ??? ?? ?? ??? ???? ? ??. RAG ??? ?? ??? ????? ????? ????? ????.",
+    "citation_note": "CC BY acne review used for irritation and ingredient safety boundaries."
+  },
+  {
+    "id": "rosacea_pmc_pathogenesis_ccby",
+    "title": "Advances in the pathogenesis of rosacea",
+    "source": "Frontiers in Immunology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12868226/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "rosacea"
+    ],
+    "topic_tags": [
+      "rosacea",
+      "pathophysiology",
+      "classification",
+      "redness"
+    ],
+    "chunk_text": "??? ???? ??, ?? ??, ?? ?? ? ??? ?? ?? ?? ??? ? ?? ?? ??? ?? ??? ????. ??? ??? ???? ?? ??? ???? ????.",
+    "citation_note": "Europe PMC verified cc by; used for rosacea pathogenesis source diversity."
+  },
+  {
+    "id": "rosacea_pmc_inflammation_axis_ccby",
+    "title": "Advances in the pathogenesis of rosacea",
+    "source": "Frontiers in Immunology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12868226/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "rosacea"
+    ],
+    "topic_tags": [
+      "rosacea",
+      "inflammation",
+      "triggers",
+      "beneficial_management"
+    ],
+    "chunk_text": "?? ????? ??, ????, ??? ??? ??? ? ?? ??? ?? ??? ?? ?? ??? ????. ???? ?? ?? ? ???? ??? ??? ?? ??? ???.",
+    "citation_note": "Europe PMC verified cc by; used for rosacea inflammation and trigger framing."
+  },
+  {
+    "id": "rosacea_pmc_skin_barrier_ccby",
+    "title": "Advances in the pathogenesis of rosacea",
+    "source": "Frontiers in Immunology via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12868226/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "rosacea"
+    ],
+    "topic_tags": [
+      "rosacea",
+      "skin_barrier",
+      "ingredient_safety",
+      "sensitive_skin"
+    ],
+    "chunk_text": "?? ?? ????? ?? ??? ???? ??? ? ???? ??, ?? ? ??, ??? ? ?? ???? ? ??? ??? ?? ??? ??? ?? ???? ????.",
+    "citation_note": "Europe PMC verified cc by; used for rosacea barrier and ingredient safety."
+  },
+  {
+    "id": "seborrheic_revisited_pathophysiology_ccby",
+    "title": "Seborrheic Dermatitis Revisited: Pathophysiology, Diagnosis, and Emerging Therapies-A Narrative Review",
+    "source": "Biomedicines via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12562114/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "seborrheic",
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_condition",
+      "seborrheic_dermatitis",
+      "pathophysiology",
+      "classification"
+    ],
+    "chunk_text": "??? ???? ??, ????? ?? ??, ?? ??, ?? ?? ??? ?? ??? ? ?? ??? ???? ????. ?? ??? ??? ???? ?? ?? ???? ???? ???.",
+    "citation_note": "Europe PMC verified cc by; added for second seborrheic source."
+  },
+  {
+    "id": "seborrheic_revisited_diagnosis_ccby",
+    "title": "Seborrheic Dermatitis Revisited: Pathophysiology, Diagnosis, and Emerging Therapies-A Narrative Review",
+    "source": "Biomedicines via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12562114/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "seborrheic",
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_condition",
+      "seborrheic_dermatitis",
+      "diagnosis",
+      "differential",
+      "referral"
+    ],
+    "chunk_text": "?? ??, ??, ??, ? ??? ??? ??? ??? ??? ??? ??? ?? ? ???, ????????? ?? ??? ??? ? ??. ????? ?? ??? ?? ??? ???.",
+    "citation_note": "Europe PMC verified cc by; used for differential caution."
+  },
+  {
+    "id": "seborrheic_revisited_management_boundary_ccby",
+    "title": "Seborrheic Dermatitis Revisited: Pathophysiology, Diagnosis, and Emerging Therapies-A Narrative Review",
+    "source": "Biomedicines via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12562114/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "seborrheic",
+      "sebdermatitis"
+    ],
+    "topic_tags": [
+      "seborrheic_condition",
+      "seborrheic_dermatitis",
+      "beneficial_management",
+      "ingredient_safety"
+    ],
+    "chunk_text": "??? ??? ?? ??? ?????? ??? ????, ? RAG? ?????? ??? ?? ???. ?? ??? ?? ???, ?? ?? ??, ?? ??? ??? ????.",
+    "citation_note": "Europe PMC verified cc by; used for management boundary."
+  },
+  {
+    "id": "milia_bp_sequela_ccby",
+    "title": "Milia En Plaque After Bullous Pemphigoid: An Unusual Sequela",
+    "source": "Cureus via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11658906/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "milia"
+    ],
+    "topic_tags": [
+      "milia",
+      "differential",
+      "history",
+      "referral"
+    ],
+    "chunk_text": "???? ??? ?? ??? ?? ??? ???? ???? ??? ? ????, ??? ??? ?? ???? ??? ??? ?? ?? ??? ???? ???.",
+    "citation_note": "Europe PMC verified cc by; added for second milia source."
+  },
+  {
+    "id": "milia_bp_management_caution_ccby",
+    "title": "Milia En Plaque After Bullous Pemphigoid: An Unusual Sequela",
+    "source": "Cureus via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11658906/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "milia"
+    ],
+    "topic_tags": [
+      "milia",
+      "self_care",
+      "safety",
+      "beneficial_management"
+    ],
+    "chunk_text": "????? ??? ??? ?? ???? ?? ?? ?? ??? ? ?? ?? ???? ?? ??? ???. ? ???????? ??? ??? ??? ????.",
+    "citation_note": "Europe PMC verified cc by; used for non-procedural safety."
+  },
+  {
+    "id": "atopic_multidisciplinary_features_ccby",
+    "title": "Atopic Dermatitis: Disease Features, Therapeutic Options, and a Multidisciplinary Approach",
+    "source": "Life via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10305021/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "atopic"
+    ],
+    "topic_tags": [
+      "atopic_dermatitis",
+      "classification",
+      "itch",
+      "skin_barrier"
+    ],
+    "chunk_text": "??? ???? ??, ???, ??? ??, ?? ??? ??? ? ??? ??? ?? ??? ?? ?? ?? ????. ??? ????? ?? ???? ???.",
+    "citation_note": "Europe PMC verified cc by; added for atopic source diversity."
+  },
+  {
+    "id": "atopic_multidisciplinary_care_ccby",
+    "title": "Atopic Dermatitis: Disease Features, Therapeutic Options, and a Multidisciplinary Approach",
+    "source": "Life via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10305021/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "atopic"
+    ],
+    "topic_tags": [
+      "atopic_dermatitis",
+      "beneficial_management",
+      "self_care",
+      "trigger_avoidance"
+    ],
+    "chunk_text": "??? ??? ?? ????? ??, ?? ?? ??, ?? ??, ?? ?? ??? ??? ????. ????? ?????? ??? ?? ???? ????.",
+    "citation_note": "Europe PMC verified cc by; used for atopic care source diversity."
+  },
+  {
+    "id": "atopic_pathophysiology_future_ccby",
+    "title": "Unraveling Atopic Dermatitis: Insights into Pathophysiology, Therapeutic Advances, and Future Perspectives",
+    "source": "Cells via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10931328/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "atopic"
+    ],
+    "topic_tags": [
+      "atopic_dermatitis",
+      "pathophysiology",
+      "skin_barrier",
+      "inflammation"
+    ],
+    "chunk_text": "??? ???? ?? ??, ?? ??, ??? ??, ??? ??? ????? ??? ? ??. RAG ??? ??? ??? ???? ?? ?? ??? ?? ???? ?? ????.",
+    "citation_note": "Europe PMC verified cc by; added for atopic pathophysiology diversity."
+  },
+  {
+    "id": "atopic_psoriasis_child_management_ccby",
+    "title": "Pathophysiology of Atopic Dermatitis and Psoriasis: Implications for Management in Children",
+    "source": "Children via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6826460/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "atopic",
+      "psoriasis"
+    ],
+    "topic_tags": [
+      "atopic_dermatitis",
+      "psoriasis",
+      "pediatric",
+      "management",
+      "differential"
+    ],
+    "chunk_text": "??? ???? ??? ?? ??? ??????, ??????????????? ??? ?? ??? ??? ? ??. ??? ?? ??? ??? ?? ??? ? ????? ??.",
+    "citation_note": "Europe PMC verified cc by; shared AD/psoriasis differential source."
+  },
+  {
+    "id": "psoriasis_child_pathophysiology_ccby",
+    "title": "Pathophysiology of Atopic Dermatitis and Psoriasis: Implications for Management in Children",
+    "source": "Children via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6826460/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "psoriasis"
+    ],
+    "topic_tags": [
+      "psoriasis",
+      "pathophysiology",
+      "classification",
+      "management"
+    ],
+    "chunk_text": "??? ?? ??? ???? ??? ???? ?? ??? ?????? ????. ??? ??? ?? ???? ??? ????? ???? ?? ?? ?? ??? ???.",
+    "citation_note": "Europe PMC verified cc by; added for psoriasis source diversity."
+  },
+  {
+    "id": "psoriasis_beyond_skin_ccby",
+    "title": "Psoriasis Beyond the Skin: A Disease With Cardiovascular Risk",
+    "source": "Cureus via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12280104/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "psoriasis"
+    ],
+    "topic_tags": [
+      "psoriasis",
+      "systemic_association",
+      "referral",
+      "safety"
+    ],
+    "chunk_text": "??? ?? ???? ??? ?? ?? ? ???? ????? ??? ? ??. RAG ??? ?? ??, ?? ??, ?? ??? ??? ?? ??? ????.",
+    "citation_note": "Europe PMC verified cc by; added for psoriasis systemic-risk source."
+  },
+  {
+    "id": "psoriasis_dietary_principles_boundary_ccby",
+    "title": "Dietary Principles, Interventions and Oxidative Stress in Psoriasis Management: Current and Future Perspectives",
+    "source": "Medicina via PubMed Central",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12299924/",
+    "license": "Creative Commons Attribution License CC-BY 4.0; verified via Europe PMC license=cc by",
+    "allowed_use": "cc_by",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "psoriasis"
+    ],
+    "topic_tags": [
+      "psoriasis",
+      "lifestyle",
+      "beneficial_management",
+      "treatment_boundary"
+    ],
+    "chunk_text": "?? ???? ????? ?? ??? ?????, RAG? ?? ???? ???? ???? ???? ???. ?? ??? ??, ?? ??, ?? ?? ??, ?? ?? ??? ??.",
+    "citation_note": "Europe PMC verified cc by; used for lifestyle boundary."
+  },
+  {
+    "id": "abnormal_nci_skin_cancer_treatment_warning_public_domain",
+    "title": "Skin Cancer Treatment (PDQ?)?Patient Version",
+    "source": "National Cancer Institute",
+    "url": "https://www.cancer.gov/types/skin/patient/skin-treatment-pdq",
+    "license": "NCI text is free of copyright unless otherwise indicated; credit NCI as source",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "abnormal"
+    ],
+    "topic_tags": [
+      "abnormal_uncertain",
+      "skin_change",
+      "red_flags",
+      "referral"
+    ],
+    "chunk_text": "??????? ??? ?? ?? ??, ? ?? ?? ??, ?? ?? ???? ??? ??? ?? ??? ???? ??. RAG ??? ?? ???? ??? ?? ???? ????.",
+    "citation_note": "NCI reuse policy verified public-domain text; added for abnormal-source diversity."
+  },
+  {
+    "id": "abnormal_nci_skin_biopsy_context_public_domain",
+    "title": "Skin Cancer Treatment (PDQ?)?Patient Version",
+    "source": "National Cancer Institute",
+    "url": "https://www.cancer.gov/types/skin/patient/skin-treatment-pdq",
+    "license": "NCI text is free of copyright unless otherwise indicated; credit NCI as source",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "abnormal"
+    ],
+    "topic_tags": [
+      "abnormal_uncertain",
+      "diagnostic_boundary",
+      "referral",
+      "safety"
+    ],
+    "chunk_text": "?? ??? ?? ??? ?? ??? ??? ?? ???? ? ?? ??? ?? ?????. ??? ?? RAG? ??? ?? ???? ?? ?? ??? ?? ??? ????.",
+    "citation_note": "NCI reuse policy verified public-domain text; used for diagnostic-boundary statement."
+  },
+  {
+    "id": "abnormal_nci_prevention_sun_public_domain",
+    "title": "Skin Cancer Prevention (PDQ?)?Patient Version",
+    "source": "National Cancer Institute",
+    "url": "https://www.cancer.gov/types/skin/patient/skin-prevention-pdq",
+    "license": "NCI text is free of copyright unless otherwise indicated; credit NCI as source",
+    "allowed_use": "public_domain",
+    "last_checked": "2026-06-06",
+    "class_tags": [
+      "abnormal",
+      "normal"
+    ],
+    "topic_tags": [
+      "abnormal_uncertain",
+      "normal_skin",
+      "sun_protection",
+      "beneficial_management"
+    ],
+    "chunk_text": "??? ?? ?? ?? ?? ???? ??? ?? ??? ?? ?? ?? ??? ??? ? ??. ?? ???? ??? ??? ??? ????? ???? ?? ?? ??? ????.",
+    "citation_note": "NCI reuse policy verified public-domain text; used for sun-protection and abnormal-triage context."
+  }
+]

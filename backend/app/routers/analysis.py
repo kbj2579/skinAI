@@ -32,6 +32,7 @@ async def analyze(
     body_part: str | None = Query(default=None, description="분석 부위 (얼굴/팔/다리/등/가슴/배)"),
     smoking:   bool | None = Query(default=None, description="흡연 여부"),
     drinking:  bool | None = Query(default=None, description="음주 여부"),
+    symptom_description: str | None = Query(default=None, max_length=500, description="사용자가 입력한 증상 설명"),
     user_id: int = Depends(get_current_user_id),
     db: AsyncSession = Depends(get_db),
 ):
@@ -82,6 +83,7 @@ async def analyze(
         body_part,
         smoking,
         drinking,
+        symptom_description,
     )
 
     # DB 저장
@@ -91,6 +93,7 @@ async def analyze(
         body_part=body_part,
         smoking=smoking,
         drinking=drinking,
+        symptom_description=symptom_description,
         image_s3_key=s3_key,
         raw_result=model_result.model_dump(),
         risk_level=model_result.risk_level,
@@ -132,6 +135,7 @@ async def analyze(
         body_part=record.body_part,
         smoking=record.smoking,
         drinking=record.drinking,
+        symptom_description=record.symptom_description,
         risk_level=record.risk_level,
         conditions=model_result.conditions,
         confidence=record.confidence,

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "blackheads_basic",
+    "pred_label": "Blackheads",
+    "symptoms": "코 주변에 검은 점처럼 보이고 통증은 없음",
+    "expected_terms": ["블랙헤드", "면포성", "근거 출처", "의료 진단"]
+  },
+  {
+    "name": "whiteheads_basic",
+    "pred_label": "Whiteheads",
+    "symptoms": "작고 하얀 좁쌀처럼 보이고 따갑지는 않음",
+    "expected_terms": ["화이트헤드", "면포성", "근거 출처", "의료 진단"]
+  },
+  {
+    "name": "papules_inflammatory",
+    "pred_label": "Papules",
+    "symptoms": "붉고 단단하게 올라왔고 만지면 약간 아픔",
+    "expected_terms": ["구진", "염증성", "피부과", "근거 출처"]
+  },
+  {
+    "name": "pustules_pain_pus",
+    "pred_label": "Pustules",
+    "symptoms": "고름이 보이고 만지면 아픔",
+    "expected_terms": ["농포", "고름", "피부과", "근거 출처"]
+  },
+  {
+    "name": "cyst_recurrent_scar_risk",
+    "pred_label": "Cyst",
+    "symptoms": "깊게 만져지고 아프고 반복되며 흉터가 걱정됨",
+    "expected_terms": ["낭종성", "흉터", "피부과", "근거 출처"]
+  }
+]

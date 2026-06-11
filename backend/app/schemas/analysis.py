@@ -36,6 +36,7 @@ class AnalysisResponse(BaseModel):
     body_part: str | None = None
     smoking: bool | None = None
     drinking: bool | None = None
+    symptom_description: str | None = None
     risk_level: str
     conditions: list[ConditionItem]
     confidence: float

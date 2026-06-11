@@ -1,0 +1,86 @@
+[
+  {
+    "name": "blackhead_open_comedone",
+    "pred_label": "blackhead",
+    "symptoms": "코 주변에 검은 점처럼 보이고 통증은 없음",
+    "expected_terms": ["블랙헤드", "면포성", "성분 선택 참고", "근거 출처"]
+  },
+  {
+    "name": "whitehead_closed_comedone",
+    "pred_label": "whitehead",
+    "symptoms": "작고 흰 좁쌀처럼 보이며 가렵지는 않음",
+    "expected_terms": ["화이트헤드", "면포성", "성분 선택 참고", "근거 출처"]
+  },
+  {
+    "name": "papule_red_bump",
+    "pred_label": "papule",
+    "symptoms": "붉고 단단하게 올라왔고 만지면 약간 아픔",
+    "expected_terms": ["구진", "염증성 여드름", "피부과", "근거 출처"]
+  },
+  {
+    "name": "pustule_pus_visible",
+    "pred_label": "pustule",
+    "symptoms": "고름이 보이고 주변이 붉음",
+    "expected_terms": ["농포", "고름", "성분 선택 참고", "근거 출처"]
+  },
+  {
+    "name": "cystnnodule_deep_pain",
+    "pred_label": "cystnnodule",
+    "symptoms": "깊게 만져지고 아프며 반복됨",
+    "expected_terms": ["결절+낭종", "흉터", "피부과", "근거 출처"]
+  },
+  {
+    "name": "complexacne_mixed",
+    "pred_label": "complexacne",
+    "symptoms": "좁쌀, 붉은 병변, 고름이 함께 보임",
+    "expected_terms": ["복합-미분류 여드름", "복합", "성분 선택 참고", "근거 출처"]
+  },
+  {
+    "name": "milia_white_papules",
+    "pred_label": "milia",
+    "symptoms": "눈가 주변에 작고 흰 알갱이처럼 보임",
+    "expected_terms": ["비립종", "자가 제거", "성분 선택 참고", "근거 출처"]
+  },
+  {
+    "name": "rosacea_flushing",
+    "pred_label": "rosacea",
+    "symptoms": "얼굴 중앙이 자주 붉고 화끈거림",
+    "expected_terms": ["주사", "홍조", "자외선차단제", "근거 출처"]
+  },
+  {
+    "name": "seborrheic_oily_scale",
+    "pred_label": "seborrheic",
+    "symptoms": "코 주변이 번들거리고 각질이 반복됨",
+    "expected_terms": ["지루", "각질", "자극", "근거 출처"]
+  },
+  {
+    "name": "sebdermatitis_greasy_scale",
+    "pred_label": "sebdermatitis",
+    "symptoms": "눈썹과 코 주변이 붉고 기름진 각질이 있음",
+    "expected_terms": ["지루성 피부염", "기름진", "진료", "근거 출처"]
+  },
+  {
+    "name": "atopic_itch_dryness",
+    "pred_label": "atopic",
+    "symptoms": "건조하고 가려우며 긁으면 붉어짐",
+    "expected_terms": ["아토피 피부염", "보습", "장벽", "근거 출처"]
+  },
+  {
+    "name": "psoriasis_scaly_plaque",
+    "pred_label": "psoriasis",
+    "symptoms": "두껍고 하얀 각질이 있는 붉은 판처럼 보임",
+    "expected_terms": ["건선", "인설", "관절", "근거 출처"]
+  },
+  {
+    "name": "normal_no_visible_lesion",
+    "pred_label": "normal",
+    "symptoms": "뚜렷한 병변은 없고 피부 변화가 걱정됨",
+    "expected_terms": ["정상", "기본", "자외선", "근거 출처"]
+  },
+  {
+    "name": "abnormal_uncertain_change",
+    "pred_label": "abnormal",
+    "symptoms": "색과 모양이 바뀌는 병변이 있어 걱정됨",
+    "expected_terms": ["비정상", "미분류", "변화", "근거 출처"]
+  }
+]

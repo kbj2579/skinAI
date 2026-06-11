@@ -1,0 +1,14 @@
+{
+  "pred_label": "pustule",
+  "pred_label_ko": "농포",
+  "confidence": 0.86,
+  "top_k_probabilities": {
+    "pustule": 0.86,
+    "papule": 0.08,
+    "cystnnodule": 0.03,
+    "whitehead": 0.02,
+    "blackhead": 0.01
+  },
+  "model_version": "skin-14node-demo",
+  "image_id": "sample-pustule-001"
+}

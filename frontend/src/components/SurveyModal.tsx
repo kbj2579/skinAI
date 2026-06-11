@@ -5,21 +5,25 @@ export interface SurveyData {
   bodyPart: string
   smoking: boolean | null
   drinking: boolean | null
+  symptomDescription: string
 }
 
 const BODY_PARTS = ['얼굴', '팔', '다리', '등', '가슴', '배']
 
 interface Props {
+  analysisType?: 'skin' | 'lesion'
   onConfirm: (data: SurveyData) => void
   onClose: () => void
 }
 
-export default function SurveyModal({ onConfirm, onClose }: Props) {
+export default function SurveyModal({ analysisType = 'skin', onConfirm, onClose }: Props) {
   const [bodyPart, setBodyPart] = useState('')
   const [smoking, setSmoking] = useState<boolean | null>(null)
   const [drinking, setDrinking] = useState<boolean | null>(null)
+  const [symptomDescription, setSymptomDescription] = useState('')
 
   const canConfirm = bodyPart !== '' && smoking !== null && drinking !== null
+  const showSymptomDescription = analysisType === 'skin'
 
   return (
     <div
@@ -83,6 +87,41 @@ export default function SurveyModal({ onConfirm, onClose }: Props) {
           ))}
         </div>
 
+        {showSymptomDescription && (
+          <div style={{ marginBottom: 20 }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 10 }}>
+              <p style={{ fontSize: font.size.sm, fontWeight: font.weight.semibold, color: colors.text1, margin: 0 }}>
+                증상 설명
+              </p>
+              <span style={{ fontSize: font.size.xs, color: colors.text3 }}>
+                선택 입력
+              </span>
+            </div>
+            <textarea
+              value={symptomDescription}
+              onChange={(e) => setSymptomDescription(e.target.value.slice(0, 500))}
+              placeholder="예: 최근 볼 주변이 붉고 따가워요. 세안 후 건조함이 심하고 트러블이 늘었어요."
+              rows={3}
+              style={{
+                width: '100%',
+                boxSizing: 'border-box',
+                resize: 'none',
+                padding: '12px 14px',
+                borderRadius: radius.md,
+                border: `1.5px solid ${symptomDescription.trim() ? colors.accent : colors.border}`,
+                backgroundColor: symptomDescription.trim() ? colors.accentLight : colors.bg,
+                color: colors.text1,
+                fontSize: font.size.sm,
+                lineHeight: 1.45,
+                outline: 'none',
+              }}
+            />
+            <p style={{ marginTop: 6, marginBottom: 0, fontSize: font.size.xs, color: colors.text3, textAlign: 'right' }}>
+              {symptomDescription.length}/500
+            </p>
+          </div>
+        )}
+
         {/* 흡연 여부 */}
         <p style={{ fontSize: font.size.sm, fontWeight: font.weight.semibold, color: colors.text1, marginBottom: 10 }}>
           흡연 여부
@@ -137,7 +176,12 @@ export default function SurveyModal({ onConfirm, onClose }: Props) {
 
         {/* 확인 버튼 */}
         <button
-          onClick={() => canConfirm && onConfirm({ bodyPart, smoking: smoking!, drinking: drinking! })}
+          onClick={() => canConfirm && onConfirm({
+            bodyPart,
+            smoking: smoking!,
+            drinking: drinking!,
+            symptomDescription: symptomDescription.trim(),
+          })}
           disabled={!canConfirm}
           style={{
             width: '100%',

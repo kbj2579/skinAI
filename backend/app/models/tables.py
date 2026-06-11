@@ -42,6 +42,7 @@ class Analysis(Base):
     body_part = Column(String, nullable=True)            # 얼굴|팔|다리|등|가슴|배
     smoking   = Column(Boolean, nullable=True)           # 흡연 여부
     drinking  = Column(Boolean, nullable=True)           # 음주 여부
+    symptom_description = Column(Text, nullable=True)
     recommend_visit = Column(Boolean, default=False)
     is_diagnostic = Column(Boolean, default=False)    # 항상 False
     created_at = Column(TIMESTAMP(timezone=True), default=_now)

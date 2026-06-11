@@ -88,6 +88,7 @@ interface AnalyzeOptions {
   bodyPart?: string
   smoking?: boolean
   drinking?: boolean
+  symptomDescription?: string
 }
 
 export const analyze = (type: AnalysisType, file: Blob, options: AnalyzeOptions = {}) => {
@@ -98,6 +99,7 @@ export const analyze = (type: AnalysisType, file: Blob, options: AnalyzeOptions 
   if (options.bodyPart != null) params.body_part  = options.bodyPart
   if (options.smoking  != null) params.smoking    = options.smoking
   if (options.drinking != null) params.drinking   = options.drinking
+  if (options.symptomDescription) params.symptom_description = options.symptomDescription
   return client.post(`/analysis/${type}`, form, {
     params,
     timeout: 90_000,

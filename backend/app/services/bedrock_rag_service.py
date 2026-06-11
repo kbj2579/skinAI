@@ -6,6 +6,7 @@ from botocore.exceptions import ClientError
 
 from app.core.config import settings
 from app.schemas.analysis import ModelResult, SkinMetrics
+from app.services.acne_rag_adapter import generate_acne_guidance
 
 logger = logging.getLogger(__name__)
 
@@ -98,6 +99,7 @@ def _build_query(
     body_part: Optional[str],
     smoking: Optional[bool],
     drinking: Optional[bool],
+    symptom_description: Optional[str],
     db_history: str,
 ) -> str:
     type_label = {"skin": "안면피부", "lesion": "병변"}.get(analysis_type, analysis_type)
@@ -121,6 +123,7 @@ def _build_query(
 - 위험도: {model_result.risk_level}
 - 신뢰도: {model_result.confidence:.0%}
 - 생활 습관: {lifestyle_str}
+- 사용자가 입력한 증상 설명: {symptom_description or "미입력"}
 {history_part}
 
 [요청 사항]
@@ -140,12 +143,22 @@ def explain_with_rag(
     body_part: Optional[str] = None,
     smoking: Optional[bool] = None,
     drinking: Optional[bool] = None,
+    symptom_description: Optional[str] = None,
 ) -> tuple[str, SkinMetrics]:
     """
     Bedrock Knowledge Base RAG로 설명 생성.
     KB 미설정 또는 실패 시 FALLBACK_MESSAGE 반환.
     """
     metrics = compute_skin_metrics(model_result)
+
+    if analysis_type == "skin":
+        acne_guidance = generate_acne_guidance(
+            model_result,
+            user_symptoms=symptom_description or "",
+            use_bedrock=False,
+        )
+        if acne_guidance:
+            return acne_guidance, metrics
 
     if not settings.use_bedrock_rag:
         return FALLBACK_MESSAGE, metrics
@@ -155,7 +168,7 @@ def explain_with_rag(
         f"arn:aws:bedrock:{region}::foundation-model/{settings.bedrock_model_id}"
     )
     query = _build_query(
-        model_result, analysis_type, body_part, smoking, drinking, db_history
+        model_result, analysis_type, body_part, smoking, drinking, symptom_description, db_history
     )
 
     try:

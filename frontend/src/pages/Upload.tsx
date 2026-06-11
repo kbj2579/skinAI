@@ -363,6 +363,7 @@ export default function Upload() {
         bodyPart: survey?.bodyPart,
         smoking: survey?.smoking ?? undefined,
         drinking: survey?.drinking ?? undefined,
+        symptomDescription: survey?.symptomDescription,
       })
       navigate('/result', { state: { ...res.data, _fromType: type } })
     } catch (err: any) {
@@ -802,7 +803,8 @@ export default function Upload() {
             survey.bodyPart,
             survey.smoking ? '흡연' : '비흡연',
             survey.drinking ? '음주' : '비음주',
-          ].map((tag) => (
+            survey.symptomDescription ? `증상: ${survey.symptomDescription.slice(0, 18)}${survey.symptomDescription.length > 18 ? '...' : ''}` : null,
+          ].filter((tag): tag is string => Boolean(tag)).map((tag) => (
             <span key={tag} style={{
               fontSize: font.size.xs,
               color: colors.accent,
@@ -826,6 +828,7 @@ export default function Upload() {
       {showGuide && <ImageGuide type={type} onClose={() => setShowGuide(false)} />}
       {showSurvey && (
         <SurveyModal
+          analysisType={type}
           onConfirm={handleSurveyConfirm}
           onClose={() => { setShowSurvey(false); setPendingCapture(null) }}
         />
