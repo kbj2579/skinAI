@@ -11,7 +11,7 @@ from app.core.security import get_current_user_id
 from app.core.rate_limit import analysis_limiter
 from app.models.tables import Analysis, LesionAnalysis, LesionTrack
 from app.schemas.analysis import AnalysisResponse
-from app.services import ai_service, storage_service, bedrock_rag_service
+from app.services import ai_service, storage_service, bedrock_rag_service, sentencifier_service
 
 router = APIRouter(prefix="/analysis", tags=["analysis"])
 
@@ -73,7 +73,7 @@ async def analyze(
         f"{r.created_at.date()} {r.risk_level}" for r in history_rows
     ) if history_rows else ""
 
-    # 설명 생성: Bedrock RAG (KB 미설정 시 fallback 메시지 반환)
+    # 설명 생성: Sentencifier → Bedrock RAG 순으로 fallback
     explanation, skin_metrics = await asyncio.to_thread(
         bedrock_rag_service.explain_with_rag,
         model_result,
@@ -85,7 +85,6 @@ async def analyze(
         drinking,
         symptom_description,
     )
-
     # DB 저장
     record = Analysis(
         user_id=user_id,
@@ -107,6 +106,13 @@ async def analyze(
     db.add(record)
     await db.commit()
     await db.refresh(record)
+
+    # Sentencifier 호출 (record.id 확정 후)
+    sentencifier_report = await sentencifier_service.get_final_report(model_result, record.id, user_id, db)
+    if sentencifier_report:
+        record.gemini_explanation = sentencifier_report
+        await db.commit()
+        explanation = sentencifier_report
 
     # 병변 트랙에 데이터 저장 (lesion 분석 + track_id 제공 시)
     if analysis_type == "lesion" and track_id is not None:

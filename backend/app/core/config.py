@@ -43,6 +43,9 @@ class Settings(BaseSettings):
     # 생성에 사용할 Claude 모델 (기본: Haiku)
     bedrock_model_id: str = "anthropic.claude-3-haiku-20240307-v1:0"
 
+    # ── Sentencifier Lambda ───────────────────────────────────────
+    sentencifier_url: str = ""
+
     # ── JWT ───────────────────────────────────────────────────────
     jwt_secret:         str = "change-this-secret"
     jwt_expire_minutes: int = 60
@@ -76,6 +79,10 @@ class Settings(BaseSettings):
     @property
     def use_bedrock_rag(self) -> bool:
         return bool(self.bedrock_knowledge_base_id)
+
+    @property
+    def use_sentencifier(self) -> bool:
+        return bool(self.sentencifier_url)
 
 
 settings = Settings()

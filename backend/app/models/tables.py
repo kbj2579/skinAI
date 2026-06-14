@@ -20,10 +20,12 @@ class User(Base):
     email = Column(String, unique=True, nullable=False, index=True)
     password_hash = Column(String, nullable=False)
     nickname = Column(String, nullable=True)
+    skin_type = Column(String, nullable=True)  # 지성 | 건성 | 복합성 | 민감성 | 중성
     created_at = Column(TIMESTAMP(timezone=True), default=_now)
 
     analyses = relationship("Analysis", back_populates="user", cascade="all, delete")
     lesion_tracks = relationship("LesionTrack", back_populates="user", cascade="all, delete")
+    cosmetics = relationship("UserCosmetic", back_populates="user", cascade="all, delete")
 
 
 class Analysis(Base):
@@ -48,6 +50,18 @@ class Analysis(Base):
     created_at = Column(TIMESTAMP(timezone=True), default=_now)
 
     user = relationship("User", back_populates="analyses")
+
+
+class UserCosmetic(Base):
+    __tablename__ = "user_cosmetics"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    product_name = Column(String, nullable=False)
+    start_date = Column(String, nullable=False)  # YYYY-MM-DD
+    created_at = Column(TIMESTAMP(timezone=True), default=_now)
+
+    user = relationship("User", back_populates="cosmetics")
 
 
 class LesionTrack(Base):

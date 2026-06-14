@@ -21,5 +21,6 @@ class UserResponse(BaseModel):
     id: int
     email: str
     nickname: str | None
+    skin_type: str | None = None
 
     model_config = {"from_attributes": True}

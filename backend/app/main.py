@@ -9,7 +9,7 @@ from sqlalchemy import text
 
 from app.core.config import settings
 from app.core.database import init_database, get_db
-from app.routers import analysis, auth, records, chat
+from app.routers import analysis, auth, records, chat, cosmetics
 
 logger = logging.getLogger(__name__)
 
@@ -71,6 +71,7 @@ app.include_router(auth.router)
 app.include_router(analysis.router)
 app.include_router(records.router)
 app.include_router(chat.router)
+app.include_router(cosmetics.router)
 
 # ── 기본 엔드포인트 ───────────────────────────────────────────
 @app.get("/", include_in_schema=False)
