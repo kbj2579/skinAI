@@ -1,5 +1,4 @@
 import asyncio
-import json
 import logging
 
 import boto3
@@ -65,28 +64,21 @@ async def get_final_report(
 
     report_id = str(record_id)
 
-    # Step Functions expects user_input + uuid
-    user_input_data = {
-        "analysis_result": {
-            "risk_level": model_result.risk_level,
-            "conditions": [c.model_dump() for c in model_result.conditions],
-            "confidence": model_result.confidence,
+    # ValidateJSON Choice state: $.agent_a_result 존재 여부로 ProcessTextLambda 직행
+    payload = {
+        "agent_a_result": model_result.model_dump(),
+        "agent_b_result": {
+            "past_records": past_records,
+            "cosmetics": cosmetics,
         },
-        "survey_data": {
+        "agent_c_result": {
+            "skin_type": skin_type or "",
+            "cosmetics": cosmetics,
             "body_part": body_part or "",
             "smoking": smoking,
             "drinking": drinking,
             "symptom_description": symptom_description or "",
         },
-        "user_profile": {
-            "skin_type": skin_type or "",
-            "cosmetics": cosmetics,
-        },
-        "past_records": past_records,
-    }
-
-    payload = {
-        "user_input": json.dumps(user_input_data, ensure_ascii=False),
         "uuid": report_id,
     }
 
