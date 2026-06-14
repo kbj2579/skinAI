@@ -43,8 +43,9 @@ class Settings(BaseSettings):
     # 생성에 사용할 Claude 모델 (기본: Haiku)
     bedrock_model_id: str = "anthropic.claude-3-haiku-20240307-v1:0"
 
-    # ── Sentencifier Lambda ───────────────────────────────────────
+    # ── Sentencifier / Step Functions ────────────────────────────
     sentencifier_url: str = ""
+    step_functions_arn: str = ""
 
     # ── JWT ───────────────────────────────────────────────────────
     jwt_secret:         str = "change-this-secret"
@@ -82,7 +83,7 @@ class Settings(BaseSettings):
 
     @property
     def use_sentencifier(self) -> bool:
-        return bool(self.sentencifier_url)
+        return bool(self.sentencifier_url) or bool(self.step_functions_arn)
 
 
 settings = Settings()
