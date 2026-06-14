@@ -1,5 +1,4 @@
 import asyncio
-import random
 from typing import Literal
 
 from fastapi import APIRouter, Depends, File, HTTPException, Query, UploadFile
@@ -9,7 +8,7 @@ from sqlalchemy import select
 from app.core.database import get_db
 from app.core.security import get_current_user_id
 from app.core.rate_limit import analysis_limiter
-from app.models.tables import Analysis, LesionAnalysis, LesionTrack
+from app.models.tables import Analysis
 from app.schemas.analysis import AnalysisResponse
 from app.services import ai_service, storage_service, bedrock_rag_service, sentencifier_service
 
@@ -28,7 +27,7 @@ AnalysisType = Literal["skin", "lesion"]
 async def analyze(
     analysis_type: AnalysisType,
     file: UploadFile = File(...),
-    track_id:  int | None = Query(default=None, description="병변 트랙 ID (lesion 분석 시 선택)"),
+    linked_analysis_id: int | None = Query(default=None, description="이전 병변 분석 ID (같은 병변 추적 시)"),
     body_part: str | None = Query(default=None, description="분석 부위 (얼굴/팔/다리/등/가슴/배)"),
     smoking:   bool | None = Query(default=None, description="흡연 여부"),
     drinking:  bool | None = Query(default=None, description="음주 여부"),
@@ -100,6 +99,7 @@ async def analyze(
         confidence=model_result.confidence,
         gemini_explanation=explanation,
         skin_metrics=skin_metrics.model_dump() if skin_metrics else None,
+        linked_analysis_id=linked_analysis_id,
         recommend_visit=recommend_visit,
         is_diagnostic=False,
     )
@@ -113,27 +113,6 @@ async def analyze(
         record.gemini_explanation = sentencifier_report
         await db.commit()
         explanation = sentencifier_report
-
-    # 병변 트랙에 데이터 저장 (lesion 분석 + track_id 제공 시)
-    if analysis_type == "lesion" and track_id is not None:
-        track_result = await db.execute(
-            select(LesionTrack).where(
-                LesionTrack.id == track_id,
-                LesionTrack.user_id == user_id,
-            )
-        )
-        if track_result.scalar_one_or_none():
-            lesion_entry = LesionAnalysis(
-                track_id=track_id,
-                image_s3_key=s3_key,
-                risk_level=model_result.risk_level,
-                asymmetry_score=round(random.uniform(0.0, 1.0), 2),
-                border_score=round(random.uniform(0.0, 1.0), 2),
-                color_variance=round(random.uniform(0.0, 1.0), 2),
-                size_mm=round(random.uniform(1.0, 20.0), 1),
-            )
-            db.add(lesion_entry)
-            await db.commit()
 
     return AnalysisResponse(
         id=record.id,

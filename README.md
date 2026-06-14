@@ -200,7 +200,6 @@ http://localhost:3000
 
 ## 주의사항
 
-- `.env` 파일은 `.gitignore`에 포함되어 있습니다. **절대 커밋하지 마십시오.**
-- AWS Access Key는 IAM에서 최소 권한 원칙으로 발급하십시오. (S3, RDS, SageMaker)
+- `.env` 파일은 `.gitignore`에 포함되어 있습니다.
 - RDS 보안 그룹은 운영 환경에서 EC2 보안 그룹 ID만 허용하도록 변경하십시오.
 - 본 서비스의 AI 분석 결과는 의학적 진단이 아닙니다.

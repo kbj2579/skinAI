@@ -45,6 +45,7 @@ class Analysis(Base):
     smoking   = Column(Boolean, nullable=True)           # 흡연 여부
     drinking  = Column(Boolean, nullable=True)           # 음주 여부
     symptom_description = Column(Text, nullable=True)
+    linked_analysis_id = Column(Integer, ForeignKey("analyses.id", ondelete="SET NULL"), nullable=True)
     recommend_visit = Column(Boolean, default=False)
     is_diagnostic = Column(Boolean, default=False)    # 항상 False
     created_at = Column(TIMESTAMP(timezone=True), default=_now)

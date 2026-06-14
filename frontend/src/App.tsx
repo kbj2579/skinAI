@@ -9,7 +9,6 @@ import Upload from './pages/Upload'
 import Result from './pages/Result'
 import Records from './pages/Records'
 import RecordDetail from './pages/RecordDetail'
-import Compare from './pages/Compare'
 import Profile from './pages/Profile'
 import NotFound from './pages/NotFound'
 import { colors, font } from './theme'
@@ -115,8 +114,7 @@ function AppRoutes() {
       <Route path="/result" element={<PrivateRoute><Result /></PrivateRoute>} />
       <Route path="/records" element={<PrivateRoute><Records /></PrivateRoute>} />
       <Route path="/records/:id" element={<PrivateRoute><RecordDetail /></PrivateRoute>} />
-      <Route path="/compare/:trackId" element={<PrivateRoute><Compare /></PrivateRoute>} />
-      <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+<Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   )

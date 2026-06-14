@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { analyze, AnalysisType, listLesionTracks, createLesionTrack } from '../api/client'
+import { analyze, AnalysisType, updateSkinType, addCosmetic } from '../api/client'
 import ImageGuide from '../components/ImageGuide'
 import SurveyModal, { SurveyData } from '../components/SurveyModal'
 import { useToast } from '../context/ToastContext'
@@ -88,8 +88,6 @@ async function preprocessImage(file: File): Promise<Blob> {
   })
 }
 
-interface LesionTrack { id: number; track_name: string | null }
-
 export default function Upload() {
   // location.key가 바뀔 때마다 컴포넌트가 새로 렌더링됨
   const location = useLocation()
@@ -125,10 +123,6 @@ export default function Upload() {
   const capturedRef = useRef(false)
   const prevPixelsRef = useRef<Uint8ClampedArray | null>(null)
 
-  const [tracks, setTracks] = useState<LesionTrack[]>([])
-  const [selectedTrackId, setSelectedTrackId] = useState<number | undefined>()
-  const [newTrackName, setNewTrackName] = useState('')
-  const [creatingTrack, setCreatingTrack] = useState(false)
   const { show } = useToast()
 
   // 페이지 진입 시 상태 초기화
@@ -260,12 +254,8 @@ export default function Upload() {
     }
   }, [captureFrame, show])
 
-  // 분석 유형 변경 시 저장 + 병변 트랙 로드
   useEffect(() => {
     localStorage.setItem('last_analysis_type', type)
-    if (type === 'lesion') {
-      listLesionTracks().then((res) => setTracks(res.data)).catch(() => setTracks([]))
-    }
   }, [type])
 
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -303,10 +293,21 @@ export default function Upload() {
     setShowSurvey(true)
   }
 
-  // 설문 완료 → 실제 파일 선택 열기
-  const handleSurveyConfirm = (data: SurveyData) => {
+  // 설문 완료 → 프로필 저장 후 파일 선택 열기
+  const handleSurveyConfirm = async (data: SurveyData) => {
     setSurvey(data)
     setShowSurvey(false)
+
+    // 피부타입 + 화장품 저장 (실패해도 분석은 계속 진행)
+    try {
+      if (data.skinType) await updateSkinType(data.skinType)
+      for (const c of data.cosmetics) {
+        await addCosmetic(c.productName, c.startDate)
+      }
+    } catch {
+      // 프로필 저장 실패는 무시하고 분석 계속
+    }
+
     setTimeout(() => {
       if (pendingCapture === 'camera' && type === 'skin') {
         startFaceCamera()
@@ -317,22 +318,6 @@ export default function Upload() {
       }
       setPendingCapture(null)
     }, 100)
-  }
-
-  const handleCreateTrack = async () => {
-    if (!newTrackName.trim()) return
-    setCreatingTrack(true)
-    try {
-      const res = await createLesionTrack(newTrackName.trim())
-      setTracks((prev) => [...prev, res.data])
-      setSelectedTrackId(res.data.id)
-      setNewTrackName('')
-      show('트랙이 생성됐습니다.', 'success')
-    } catch (err: any) {
-      show(err.message ?? '트랙 생성에 실패했습니다.', 'error')
-    } finally {
-      setCreatingTrack(false)
-    }
   }
 
   const handleSubmit = async () => {
@@ -359,7 +344,7 @@ export default function Upload() {
       // 단계 3: AI 분석 (실제 API 호출)
       setLoadingStep(2)
       const res = await analyze(type, resized, {
-        trackId: type === 'lesion' ? selectedTrackId : undefined,
+        linkedAnalysisId: survey?.linkedAnalysisId,
         bodyPart: survey?.bodyPart,
         smoking: survey?.smoking ?? undefined,
         drinking: survey?.drinking ?? undefined,
@@ -524,97 +509,6 @@ export default function Upload() {
           </button>
         ))}
       </div>
-
-      {/* 병변 트랙 */}
-      {type === 'lesion' && (
-        <div
-          style={{
-            backgroundColor: colors.card,
-            borderRadius: radius.lg,
-            padding: 16,
-            marginBottom: 16,
-            boxShadow: shadow.card,
-          }}
-        >
-          <p style={{ fontSize: font.size.sm, fontWeight: font.weight.semibold, color: colors.text1, marginBottom: 10 }}>
-            병변 추적 트랙
-          </p>
-          <select
-            value={selectedTrackId ?? ''}
-            onChange={(e) => setSelectedTrackId(e.target.value ? Number(e.target.value) : undefined)}
-            style={{
-              width: '100%',
-              padding: '10px 12px',
-              borderRadius: radius.md,
-              border: 'none',
-              backgroundColor: colors.bg,
-              fontSize: font.size.sm,
-              color: colors.text1,
-              marginBottom: 10,
-              outline: 'none',
-            }}
-          >
-            <option value="">트랙 없이 분석</option>
-            {tracks.map((t) => (
-              <option key={t.id} value={t.id}>{t.track_name ?? `트랙 #${t.id}`}</option>
-            ))}
-          </select>
-          <div style={{ display: 'flex', gap: 8 }}>
-            <input
-              type="text"
-              placeholder="새 트랙 이름"
-              value={newTrackName}
-              onChange={(e) => setNewTrackName(e.target.value)}
-              onKeyDown={(e) => { if (e.key === 'Enter') handleCreateTrack() }}
-              style={{
-                flex: 1,
-                padding: '10px 12px',
-                borderRadius: radius.md,
-                border: 'none',
-                backgroundColor: colors.bg,
-                fontSize: font.size.sm,
-                outline: 'none',
-              }}
-            />
-            <button
-              onClick={handleCreateTrack}
-              disabled={creatingTrack || !newTrackName.trim()}
-              style={{
-                padding: '10px 16px',
-                borderRadius: radius.md,
-                border: 'none',
-                backgroundColor: colors.accent,
-                color: '#fff',
-                fontSize: font.size.sm,
-                fontWeight: font.weight.semibold,
-                cursor: 'pointer',
-                opacity: (!newTrackName.trim() || creatingTrack) ? 0.5 : 1,
-              }}
-            >
-              추가
-            </button>
-          </div>
-          {selectedTrackId != null && (
-            <button
-              onClick={() => navigate(`/compare/${selectedTrackId}`)}
-              style={{
-                width: '100%',
-                marginTop: 10,
-                padding: '10px 12px',
-                borderRadius: radius.md,
-                border: `1px solid ${colors.divider}`,
-                backgroundColor: colors.bg,
-                color: colors.text1,
-                fontSize: font.size.sm,
-                fontWeight: font.weight.semibold,
-                cursor: 'pointer',
-              }}
-            >
-              선택한 트랙 비교 보기
-            </button>
-          )}
-        </div>
-      )}
 
       {/* 이미지 영역 */}
       {preview ? (
@@ -801,9 +695,12 @@ export default function Upload() {
         }}>
           {[
             survey.bodyPart,
+            survey.skinType || null,
             survey.smoking ? '흡연' : '비흡연',
             survey.drinking ? '음주' : '비음주',
+            survey.cosmetics.length > 0 ? `새 화장품 ${survey.cosmetics.length}개` : null,
             survey.symptomDescription ? `증상: ${survey.symptomDescription.slice(0, 18)}${survey.symptomDescription.length > 18 ? '...' : ''}` : null,
+            survey.linkedAnalysisId ? '이전 병변 연결됨' : null,
           ].filter((tag): tag is string => Boolean(tag)).map((tag) => (
             <span key={tag} style={{
               fontSize: font.size.xs,

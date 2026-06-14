@@ -84,7 +84,7 @@ export const getMe = () => client.get('/auth/me')
 export type AnalysisType = 'skin' | 'lesion'
 
 interface AnalyzeOptions {
-  trackId?: number
+  linkedAnalysisId?: number
   bodyPart?: string
   smoking?: boolean
   drinking?: boolean
@@ -95,7 +95,7 @@ export const analyze = (type: AnalysisType, file: Blob, options: AnalyzeOptions 
   const form = new FormData()
   form.append('file', file, 'image.jpg')
   const params: Record<string, string | number | boolean> = {}
-  if (options.trackId  != null) params.track_id  = options.trackId
+  if (options.linkedAnalysisId != null) params.linked_analysis_id = options.linkedAnalysisId
   if (options.bodyPart != null) params.body_part  = options.bodyPart
   if (options.smoking  != null) params.smoking    = options.smoking
   if (options.drinking != null) params.drinking   = options.drinking
@@ -124,13 +124,16 @@ export const listRecords = (
 
 export const getRecord = (id: number) => client.get(`/records/${id}`)
 
-export const createLesionTrack = (trackName: string) =>
-  client.post('/records/lesion-tracks', { track_name: trackName })
+// ── Profile ────────────────────────────────────────────────────
+export const updateSkinType = (skinType: string) =>
+  client.put('/profile/skin-type', { skin_type: skinType })
 
-export const listLesionTracks = () => client.get('/records/lesion-tracks')
+export const addCosmetic = (productName: string, startDate: string) =>
+  client.post('/profile/cosmetics', { product_name: productName, start_date: startDate })
 
-export const getLesionTrackHistory = (trackId: number) =>
-  client.get(`/records/lesion-tracks/${trackId}`)
+export const listCosmetics = () => client.get('/profile/cosmetics')
+
+export const deleteCosmetic = (id: number) => client.delete(`/profile/cosmetics/${id}`)
 
 // ── Health ─────────────────────────────────────────────────────
 export const checkHealth = () => client.get('/health', { timeout: 5_000 })
