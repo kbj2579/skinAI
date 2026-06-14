@@ -28,7 +28,7 @@ def _build_user_input(
     past_records: list,
 ) -> str:
     conditions_text = ", ".join(
-        f"{c.name}({c.confidence:.0%})" for c in model_result.conditions
+        f"{c.label}({c.score:.0%})" for c in model_result.conditions
     ) or "감지 없음"
 
     cosmetics_text = "; ".join(
