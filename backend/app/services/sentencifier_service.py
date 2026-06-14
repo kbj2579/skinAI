@@ -71,8 +71,9 @@ async def get_final_report(
             response = await client.post(settings.sentencifier_url, json=payload)
             response.raise_for_status()
         data = response.json()
+        logger.info("Sentencifier raw response (status=%s): %s", response.status_code, str(data)[:500])
         report = data.get("final_report", "").strip()
-        logger.info("Sentencifier OK — %d chars", len(report))
+        logger.info("Sentencifier final_report — %d chars", len(report))
         return report or None
     except Exception as exc:
         logger.warning("Sentencifier failed (%s) — using fallback", exc)
