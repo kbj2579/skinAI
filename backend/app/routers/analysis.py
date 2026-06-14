@@ -1,11 +1,13 @@
 import asyncio
+import logging
 from typing import Literal
 
-from fastapi import APIRouter, Depends, File, HTTPException, Query, UploadFile
+from fastapi import APIRouter, BackgroundTasks, Depends, File, HTTPException, Query, UploadFile
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 
-from app.core.database import get_db
+from app.core.config import settings
+from app.core.database import get_db, AsyncSessionLocal
 from app.core.security import get_current_user_id
 from app.core.rate_limit import analysis_limiter
 from app.models.tables import Analysis
@@ -13,6 +15,7 @@ from app.schemas.analysis import AnalysisResponse
 from app.services import ai_service, storage_service, bedrock_rag_service, sentencifier_service
 
 router = APIRouter(prefix="/analysis", tags=["analysis"])
+logger = logging.getLogger(__name__)
 
 DISCLAIMER = "본 결과는 AI 보조 분석이며 의학적 진단이 아닙니다. 증상이 지속되거나 심해지면 전문의와 상담하세요."
 VISIT_MESSAGE = "분석 결과 전문의 진료가 권장됩니다. 가까운 피부과를 방문하시어 정확한 진단을 받으시기 바랍니다."
@@ -23,9 +26,26 @@ MIN_IMAGE_BYTES = 1_024              # 1KB
 AnalysisType = Literal["skin", "lesion"]
 
 
+async def _run_sentencifier_background(record_id: int, user_id: int, model_result):
+    """백그라운드에서 sentencifier 호출 후 DB 업데이트."""
+    try:
+        async with AsyncSessionLocal() as db:
+            report = await sentencifier_service.get_final_report(model_result, record_id, user_id, db)
+            if report:
+                result = await db.execute(select(Analysis).where(Analysis.id == record_id))
+                record = result.scalar_one_or_none()
+                if record:
+                    record.gemini_explanation = report
+                    await db.commit()
+                    logger.info("Background sentencifier saved to record %d", record_id)
+    except Exception as exc:
+        logger.warning("Background sentencifier error: %s", exc)
+
+
 @router.post("/{analysis_type}", response_model=AnalysisResponse)
 async def analyze(
     analysis_type: AnalysisType,
+    background_tasks: BackgroundTasks,
     file: UploadFile = File(...),
     linked_analysis_id: int | None = Query(default=None, description="이전 병변 분석 ID (같은 병변 추적 시)"),
     body_part: str | None = Query(default=None, description="분석 부위 (얼굴/팔/다리/등/가슴/배)"),
@@ -107,12 +127,9 @@ async def analyze(
     await db.commit()
     await db.refresh(record)
 
-    # Sentencifier 호출 (record.id 확정 후)
-    sentencifier_report = await sentencifier_service.get_final_report(model_result, record.id, user_id, db)
-    if sentencifier_report:
-        record.gemini_explanation = sentencifier_report
-        await db.commit()
-        explanation = sentencifier_report
+    # Sentencifier 백그라운드 실행 (응답 블로킹 없이)
+    if settings.use_sentencifier:
+        background_tasks.add_task(_run_sentencifier_background, record.id, user_id, model_result)
 
     return AnalysisResponse(
         id=record.id,
