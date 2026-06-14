@@ -1,7 +1,6 @@
 import asyncio
 import logging
 
-import boto3
 import httpx
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
@@ -11,10 +10,6 @@ from app.models.tables import Analysis, User, UserCosmetic
 from app.schemas.analysis import ModelResult
 
 logger = logging.getLogger(__name__)
-
-DYNAMO_TABLE = "SkinReportTable"
-POLL_INTERVAL = 3   # 초
-POLL_MAX = 20       # 최대 60초 대기
 
 
 async def get_final_report(
@@ -62,9 +57,6 @@ async def get_final_report(
     user = user_result.scalar_one_or_none()
     skin_type = user.skin_type if user else None
 
-    report_id = str(record_id)
-
-    # ValidateJSON Choice state: $.agent_a_result 존재 여부로 ProcessTextLambda 직행
     payload = {
         "agent_a_result": model_result.model_dump(),
         "agent_b_result": {
@@ -79,39 +71,22 @@ async def get_final_report(
             "drinking": drinking,
             "symptom_description": symptom_description or "",
         },
-        "uuid": report_id,
+        "uuid": str(record_id),
     }
 
     try:
-        # 1. Step Functions 실행 시작
-        async with httpx.AsyncClient(timeout=15.0) as client:
+        # Lambda URL 직접 호출 → 응답에서 final_report 읽기
+        async with httpx.AsyncClient(timeout=30.0) as client:
             response = await client.post(settings.sentencifier_url, json=payload)
             response.raise_for_status()
-        logger.info("Sentencifier triggered (status=%s): %s", response.status_code, str(response.text)[:200])
 
-        # 2. DynamoDB 폴링 — ReportId = str(record_id)
-        dynamodb = boto3.resource(
-            "dynamodb",
-            region_name=settings.aws_region,
-            aws_access_key_id=settings.aws_access_key_id,
-            aws_secret_access_key=settings.aws_secret_access_key,
-        )
-        table = dynamodb.Table(DYNAMO_TABLE)
+        data = response.json()
+        report = data.get("final_report", "")
+        if report and report.strip():
+            logger.info("Sentencifier report received (%d chars) for record %d", len(report), record_id)
+            return report.strip()
 
-        for attempt in range(POLL_MAX):
-            await asyncio.sleep(POLL_INTERVAL)
-            result = await asyncio.to_thread(
-                table.get_item,
-                Key={"ReportId": report_id},
-            )
-            item = result.get("Item")
-            if item and item.get("FinalReport"):
-                report = str(item["FinalReport"]).strip()
-                logger.info("DynamoDB report found (attempt %d) — %d chars", attempt + 1, len(report))
-                return report or None
-            logger.debug("DynamoDB polling %d/%d (ReportId=%s)...", attempt + 1, POLL_MAX, report_id)
-
-        logger.warning("DynamoDB polling timed out after %ds (ReportId=%s)", POLL_INTERVAL * POLL_MAX, report_id)
+        logger.warning("Sentencifier returned empty report for record %d", record_id)
         return None
 
     except Exception as exc:
