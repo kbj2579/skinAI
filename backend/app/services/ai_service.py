@@ -33,8 +33,35 @@ async def _predict_sagemaker(image_bytes: bytes, analysis_type: str) -> ModelRes
     )
 
     result = json.loads(response["Body"].read())
-    logger.info("SageMaker OK: %s → %s", analysis_type, result.get("risk_level"))
-    return ModelResult(**result)
+
+    # 모델이 {conditions, risk_level, confidence} 형식으로 반환하면 그대로 사용
+    if "conditions" in result and "risk_level" in result:
+        logger.info("SageMaker OK: %s → %s", analysis_type, result.get("risk_level"))
+        return ModelResult(**result)
+
+    # 모델이 {highest_class_name, probability} 형식으로 반환하면 변환
+    class_name = result.get("highest_class_name", "abnormal")
+    probability = float(result.get("probability", 0.0))
+
+    # top_k_probabilities가 있으면 conditions로 변환
+    top_k = result.get("top_k_probabilities") or result.get("top_k") or {}
+    if top_k and isinstance(top_k, dict):
+        conditions = [{"label": k, "score": round(v, 4)} for k, v in sorted(top_k.items(), key=lambda x: x[1], reverse=True)]
+    else:
+        conditions = [{"label": class_name, "score": round(probability, 4)}]
+
+    # risk_level 결정
+    if class_name == "normal":
+        risk_level = "normal"
+    elif probability >= 0.80:
+        risk_level = "danger"
+    elif probability >= 0.60:
+        risk_level = "suspicious"
+    else:
+        risk_level = "mild"
+
+    logger.info("SageMaker OK (converted): %s → %s (%.2f)", class_name, risk_level, probability)
+    return ModelResult(conditions=conditions, risk_level=risk_level, confidence=probability)
 
 
 # ── 로컬 모델 서버 추론 ───────────────────────────────────────────
