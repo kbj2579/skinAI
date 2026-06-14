@@ -1,4 +1,5 @@
 import asyncio
+import json
 import logging
 
 import boto3
@@ -22,6 +23,10 @@ async def get_final_report(
     record_id: int,
     user_id: int,
     db: AsyncSession,
+    body_part: str | None = None,
+    smoking: bool | None = None,
+    drinking: bool | None = None,
+    symptom_description: str | None = None,
 ) -> str | None:
     if not settings.use_sentencifier:
         return None
@@ -35,7 +40,6 @@ async def get_final_report(
     )
     past_records = [
         {
-            "photo_url": r.image_s3_key or "",
             "record_date": r.created_at.strftime("%Y-%m-%d"),
             "risk_level": r.risk_level,
             "conditions": r.conditions or [],
@@ -61,16 +65,28 @@ async def get_final_report(
 
     report_id = str(record_id)
 
-    payload = {
-        "agent_a_result": model_result.model_dump(),
-        "agent_b_result": {
-            "past_records": past_records,
-            "cosmetics": cosmetics,
+    # Step Functions expects user_input + uuid
+    user_input_data = {
+        "analysis_result": {
+            "risk_level": model_result.risk_level,
+            "conditions": [c.model_dump() for c in model_result.conditions],
+            "confidence": model_result.confidence,
         },
-        "agent_c_result": {
+        "survey_data": {
+            "body_part": body_part or "",
+            "smoking": smoking,
+            "drinking": drinking,
+            "symptom_description": symptom_description or "",
+        },
+        "user_profile": {
             "skin_type": skin_type or "",
             "cosmetics": cosmetics,
         },
+        "past_records": past_records,
+    }
+
+    payload = {
+        "user_input": json.dumps(user_input_data, ensure_ascii=False),
         "uuid": report_id,
     }
 

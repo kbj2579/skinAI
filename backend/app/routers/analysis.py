@@ -26,11 +26,22 @@ MIN_IMAGE_BYTES = 1_024              # 1KB
 AnalysisType = Literal["skin", "lesion"]
 
 
-async def _run_sentencifier_background(record_id: int, user_id: int, model_result):
+async def _run_sentencifier_background(
+    record_id: int,
+    user_id: int,
+    model_result,
+    body_part: str | None,
+    smoking: bool | None,
+    drinking: bool | None,
+    symptom_description: str | None,
+):
     """백그라운드에서 sentencifier 호출 후 DB 업데이트."""
     try:
         async with AsyncSessionLocal() as db:
-            report = await sentencifier_service.get_final_report(model_result, record_id, user_id, db)
+            report = await sentencifier_service.get_final_report(
+                model_result, record_id, user_id, db,
+                body_part, smoking, drinking, symptom_description,
+            )
             if report:
                 result = await db.execute(select(Analysis).where(Analysis.id == record_id))
                 record = result.scalar_one_or_none()
@@ -129,7 +140,11 @@ async def analyze(
 
     # Sentencifier 백그라운드 실행 (응답 블로킹 없이)
     if settings.use_sentencifier:
-        background_tasks.add_task(_run_sentencifier_background, record.id, user_id, model_result)
+        background_tasks.add_task(
+            _run_sentencifier_background,
+            record.id, user_id, model_result,
+            body_part, smoking, drinking, symptom_description,
+        )
 
     return AnalysisResponse(
         id=record.id,
