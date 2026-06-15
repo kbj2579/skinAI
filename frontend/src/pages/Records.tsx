@@ -203,9 +203,8 @@ export default function Records() {
                   </div>
                   {/* 날짜 */}
                   <p style={{ fontSize: font.size.xs, color: colors.text2 }}>
-                    {new Date(r.created_at).toLocaleString('ko-KR', {
+                    {new Date(r.created_at).toLocaleDateString('ko-KR', {
                       year: 'numeric', month: 'short', day: 'numeric',
-                      hour: '2-digit', minute: '2-digit',
                     })}
                   </p>
                 </div>
