@@ -151,15 +151,6 @@ def explain_with_rag(
     """
     metrics = compute_skin_metrics(model_result)
 
-    if analysis_type == "skin":
-        acne_guidance = generate_acne_guidance(
-            model_result,
-            user_symptoms=symptom_description or "",
-            use_bedrock=False,
-        )
-        if acne_guidance:
-            return acne_guidance, metrics
-
     if not settings.use_bedrock_rag:
         return FALLBACK_MESSAGE, metrics
 
